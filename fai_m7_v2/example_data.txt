@@ -1,0 +1,95 @@
+CREDIT REPORT EXAMPLE 1
+======================
+Personal Information:
+Name: John Smith
+SSN: 123-45-6789
+DOB: 01/15/1980
+Phone: 555-123-4567
+Email: john.smith@email.com
+
+Credit Accounts:
+Account: 4111-1111-1111-1111 (Visa)
+Account: 9876543210 (Checking)
+
+Credit Score: 720
+Report Date: 2024-01-15
+
+---
+
+LOAN APPLICATION EXAMPLE 2
+===========================
+Applicant Information:
+Name: Robert Johnson
+SSN: 111-22-3333
+Email: robert.j@email.com
+
+Banking Details:
+Bank: ABC National Bank
+Routing Number: 021000021
+Account Number: 9988776655
+
+Employment:
+Annual Salary: $95,000
+Employer Tax ID: 12-3456789
+
+---
+
+TAX DOCUMENT EXAMPLE 3
+======================
+TAX RETURN 2023
+
+Filer: Michael Chen
+SSN: 777-88-9999
+Spouse SSN: 666-77-8888
+
+Business Information:
+Business Name: Chen Consulting LLC
+EIN: 98-7654321
+
+Direct Deposit:
+Routing: 011401533
+Account: 5544332211
+
+---
+
+WIRE TRANSFER EXAMPLE 4
+=======================
+WIRE TRANSFER INSTRUCTIONS
+
+Beneficiary: Global Investments Inc.
+Tax ID (EIN): 12-3456789
+
+Bank Details:
+Bank Name: First National Bank
+Routing Number (ABA): 021000021
+Account Number: 9876543210
+SWIFT: FNBAUS33
+
+Amount: $250,000.00
+Purpose: Investment capital
+
+---
+
+MORTGAGE APPLICATION EXAMPLE 5
+==============================
+Borrower: Sarah Williams
+SSN: 444-55-6666
+Phone: 555-444-3333
+
+Bank Information:
+Routing: 026009593
+Account: 1234567890123
+
+Property Value: $450,000
+Loan Amount: $360,000
+
+---
+
+SIMPLE TEST CASES
+=================
+1. SSN only: 123-45-6789
+2. Credit Card only: 4111-1111-1111-1111
+3. Routing + Account: Routing: 021000021, Account: 9876543210
+4. Email + Phone: john.doe@example.com, 555-123-4567
+5. Tax ID only: EIN: 12-3456789
+6. Multiple PII: SSN: 987-65-4321, Account: 1122334455, Phone: 555-999-8888

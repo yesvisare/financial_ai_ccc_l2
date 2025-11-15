@@ -1,0 +1,34 @@
+{
+  "redaction_config": {
+    "confidence_threshold": 0.5,
+    "entity_types": [
+      "SSN",
+      "CREDIT_CARD",
+      "ROUTING_NUMBER",
+      "ACCOUNT_NUMBER",
+      "TAX_ID",
+      "PHONE_NUMBER",
+      "EMAIL_ADDRESS",
+      "PERSON",
+      "US_DRIVER_LICENSE"
+    ],
+    "redaction_strategy": "replace",
+    "context_window": 100
+  },
+  "audit_config": {
+    "enable_audit_trail": true,
+    "retention_days": 2555,
+    "enable_hash_chain": true,
+    "log_format": "json"
+  },
+  "performance_config": {
+    "batch_size": 100,
+    "timeout_seconds": 30,
+    "max_retries": 3
+  },
+  "validation_config": {
+    "enable_luhn_check": true,
+    "enable_aba_check": true,
+    "reject_test_patterns": true
+  }
+}

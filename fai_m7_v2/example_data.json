@@ -1,0 +1,41 @@
+{
+  "credit_reports": [
+    {
+      "doc_id": "CR_001",
+      "text": "CREDIT REPORT\n\nPersonal Information:\nName: John Smith\nSSN: 123-45-6789\nDOB: 01/15/1980\nPhone: 555-123-4567\nEmail: john.smith@email.com\n\nCredit Accounts:\nAccount: 4111-1111-1111-1111 (Visa)\nAccount: 9876543210 (Checking)\n\nCredit Score: 720\nReport Date: 2024-01-15"
+    },
+    {
+      "doc_id": "CR_002",
+      "text": "CREDIT REPORT\n\nApplicant: Jane Doe\nSSN: 987-65-4321\nAddress: 123 Main St, Boston, MA\nPhone: 555-987-6543\n\nCredit Card: 5500-0000-0000-0004\nChecking Account: 1122334455\n\nCredit Score: 680"
+    }
+  ],
+  "loan_applications": [
+    {
+      "doc_id": "LOAN_001",
+      "text": "LOAN APPLICATION\n\nApplicant Information:\nName: Robert Johnson\nSSN: 111-22-3333\nEmail: robert.j@email.com\n\nBanking Details:\nBank: ABC National Bank\nRouting Number: 021000021\nAccount Number: 9988776655\n\nEmployment:\nAnnual Salary: $95,000\nEmployer Tax ID: 12-3456789"
+    },
+    {
+      "doc_id": "LOAN_002",
+      "text": "MORTGAGE APPLICATION\n\nBorrower: Sarah Williams\nSSN: 444-55-6666\nPhone: 555-444-3333\n\nBank Information:\nRouting: 026009593\nAccount: 1234567890123\n\nProperty Value: $450,000\nLoan Amount: $360,000"
+    }
+  ],
+  "tax_documents": [
+    {
+      "doc_id": "TAX_001",
+      "text": "TAX RETURN 2023\n\nFiler: Michael Chen\nSSN: 777-88-9999\nSpouse SSN: 666-77-8888\n\nBusiness Information:\nBusiness Name: Chen Consulting LLC\nEIN: 98-7654321\n\nDirect Deposit:\nRouting: 011401533\nAccount: 5544332211"
+    }
+  ],
+  "wire_transfer_instructions": [
+    {
+      "doc_id": "WIRE_001",
+      "text": "WIRE TRANSFER INSTRUCTIONS\n\nBeneficiary: Global Investments Inc.\nTax ID (EIN): 12-3456789\n\nBank Details:\nBank Name: First National Bank\nRouting Number (ABA): 021000021\nAccount Number: 9876543210\nSWIFT: FNBAUS33\n\nAmount: $250,000.00\nPurpose: Investment capital"
+    }
+  ],
+  "metadata": {
+    "source": "synthetic_test_data",
+    "generated_with": "faker_library",
+    "purpose": "demonstration_and_testing",
+    "warning": "Contains synthetic PII - not real personal information",
+    "total_documents": 6
+  }
+}
