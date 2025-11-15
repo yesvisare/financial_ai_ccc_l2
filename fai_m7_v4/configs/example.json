@@ -1,0 +1,30 @@
+{
+  "database": {
+    "connection_pool_size": 10,
+    "max_overflow": 20,
+    "pool_timeout": 30,
+    "echo_sql": false
+  },
+  "audit": {
+    "retention_years": 7,
+    "hash_algorithm": "sha256",
+    "enable_verification": true,
+    "verify_on_startup": false,
+    "max_text_preview_length": 500
+  },
+  "reporting": {
+    "default_format": "json",
+    "include_user_details": false,
+    "max_sample_events": 10
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "json",
+    "output": "stdout"
+  },
+  "performance": {
+    "enable_async_writes": false,
+    "batch_size": 100,
+    "write_timeout_seconds": 5
+  }
+}

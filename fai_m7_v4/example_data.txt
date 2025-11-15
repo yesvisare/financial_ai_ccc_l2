@@ -1,0 +1,164 @@
+L3 M7.4: Audit Trail & Document Provenance - Example Data
+========================================================
+
+This file contains sample data for testing the audit trail system.
+
+SAMPLE AUDIT EVENT TYPES
+-------------------------
+
+1. document_ingested
+   - When a SEC filing enters the system (10-K, 10-Q, 8-K)
+   - Captures: document_id, source_url, filing_date, document_type
+   - User: Usually data_pipeline@company.com (automated)
+
+2. document_processed
+   - When parsing/chunking/embedding completes
+   - Captures: chunks_created, embeddings_created, processing_time
+   - User: Usually data_pipeline@company.com (automated)
+
+3. query_executed
+   - When user executes a RAG query
+   - Captures: query_id, query_text (truncated to 500 chars)
+   - User: analyst@company.com, executive@company.com, etc.
+
+4. retrieval_completed
+   - When RAG retrieval executes (CRITICAL for provenance)
+   - Captures: chunks_retrieved (with chunk_id, page_num, score)
+   - User: Same as query_executed
+   - Purpose: Know exactly which documents influenced the answer
+
+5. generation_completed
+   - When LLM generates answer
+   - Captures: answer_preview, citations, model_used
+   - User: Same as query_executed
+   - Purpose: Track LLM responses and citations
+
+6. access_audited (optional)
+   - When user accesses pre-announcement data
+   - Captures: document_id, access_type, justification
+   - User: analyst@company.com with pre-approval
+   - Purpose: Insider trading prevention
+
+SAMPLE QUERIES FOR AUDIT TRAIL LOOKUP
+--------------------------------------
+
+Q1: Show me all events for document "aapl_10k_2024"
+    SELECT * FROM audit_events WHERE event_data->>'document_id' = 'aapl_10k_2024';
+
+Q2: Who accessed Q4 earnings data before public announcement?
+    SELECT user_id, timestamp, event_type
+    FROM audit_events
+    WHERE event_data->>'document_id' LIKE '%_10q_2024_q4'
+    AND timestamp < '2024-10-20T16:00:00Z';  -- Before earnings call
+
+Q3: Verify hash chain integrity for last 1000 events
+    Use API endpoint: GET /verify_integrity
+    Or Python: verify_chain_integrity("postgresql://...")
+
+Q4: Generate compliance report for Q3 2024
+    Use API endpoint: POST /compliance_report
+    Body: {"start_date": "2024-07-01T00:00:00Z", "end_date": "2024-09-30T23:59:59Z"}
+
+Q5: Trace provenance for a specific answer
+    Steps:
+    1. Find generation event: WHERE event_data->>'query_id' = 'q_20241115_001'
+    2. Find retrieval event: WHERE event_data->>'query_id' = 'q_20241115_001' AND event_type = 'retrieval_completed'
+    3. Extract chunk_ids from retrieval event
+    4. Find ingestion events: WHERE event_data->>'document_id' IN (chunk_ids)
+    5. Result: Full chain from SEC filing → chunks → answer
+
+SAMPLE DOCUMENT IDS
+-------------------
+aapl_10k_2024 - Apple Inc. annual report (FY2024)
+msft_10q_2024_q3 - Microsoft quarterly report (Q3 2024)
+tsla_8k_2024_10_15 - Tesla current report (October 15, 2024)
+googl_10k_2023 - Alphabet Inc. annual report (FY2023)
+amzn_10q_2024_q2 - Amazon quarterly report (Q2 2024)
+
+SAMPLE USER IDS
+---------------
+data_pipeline@company.com - Automated data ingestion pipeline
+analyst@company.com - Financial analyst
+executive@company.com - Executive team member
+compliance@company.com - Compliance officer
+auditor@external.com - External auditor (read-only access)
+
+COMMON AUDIT TRAIL USE CASES
+-----------------------------
+
+USE CASE 1: Regulatory Audit (SOX Section 404)
+- Auditor requests: "Show me all events from Q2 2024"
+- Generate compliance report: POST /compliance_report
+- Verify chain integrity: GET /verify_integrity
+- Export results to CSV/JSON for regulator
+
+USE CASE 2: Insider Trading Investigation
+- Compliance officer suspects pre-announcement access
+- Query: "Who accessed AAPL earnings before 10/20/2024 16:00 UTC?"
+- Review user_id, timestamp, and access justification
+- Escalate to legal if unauthorized access detected
+
+USE CASE 3: Answer Provenance Tracing
+- Executive asks: "Where did this revenue number come from?"
+- Trace query_id through: query → retrieval → chunks → source documents
+- Provide citations with page numbers
+- Verify source document authenticity (SEC EDGAR URL)
+
+USE CASE 4: Data Quality Investigation
+- Analyst reports incorrect answer
+- Trace provenance to identify source document
+- Check document_processed event for parsing errors
+- Determine if issue is: (a) source data, (b) chunking, or (c) retrieval
+
+USE CASE 5: Performance Monitoring
+- DevOps monitors processing_time_seconds in document_processed events
+- Alert if processing_time > 60 seconds (performance degradation)
+- Investigate: database lock contention, disk I/O, network latency
+
+RETENTION POLICY NOTES
+-----------------------
+
+SOX Requirements:
+- Minimum 7 years retention (often 10 years in practice)
+- Immutable storage (no deletions/modifications allowed)
+- Tamper detection via hash chain verification
+- Access controls and meta-logging (who accessed audit logs?)
+
+Storage Growth Estimates:
+- Small deployment (5K queries/month): ~25MB/month, 2GB/7 years
+- Medium deployment (50K queries/month): ~250MB/month, 20GB/7 years
+- Large deployment (500K queries/month): ~2.5GB/month, 200GB/7 years
+
+Archival Strategy:
+- Active database (PostgreSQL): Last 1 year (fast queries)
+- Warm storage (S3): Year 1-3 (slower queries, lower cost)
+- Cold storage (Glacier Deep Archive): Year 3-7 (compliance-only, minimal cost)
+
+HASH CHAIN INTEGRITY EXAMPLES
+------------------------------
+
+VALID CHAIN:
+Event 1: hash=abc123..., previous_hash=null
+Event 2: hash=def456..., previous_hash=abc123...
+Event 3: hash=ghi789..., previous_hash=def456...
+✅ Chain intact, no tampering detected
+
+BROKEN CHAIN (Tampering Detected):
+Event 1: hash=abc123..., previous_hash=null
+Event 2: hash=MODIFIED..., previous_hash=abc123...  ❌ Hash doesn't match recomputed value
+Event 3: hash=ghi789..., previous_hash=def456...  ❌ previous_hash doesn't match Event 2
+🚨 Security alert: Audit trail compromised, investigate immediately
+
+COMMON FAILURE MODES
+---------------------
+
+See tests/test_m7_financial_data_ingestion_compliance.py for automated tests of these failures:
+
+1. Timezone bugs - Use datetime.now(timezone.utc) always
+2. Non-deterministic JSON - Use json.dumps(..., sort_keys=True)
+3. Hash chain breaks - Verify with verify_integrity() regularly
+4. Accidental deletion - Enforce SQL immutability rules
+5. Lost provenance - Log retrieval events, not just queries
+6. Storage exhaustion - Implement retention policy with archival
+7. Race conditions - Use database-level locking for writes
+8. Query truncation - Store preview (500 chars max) instead of full text

@@ -1,0 +1,103 @@
+{
+  "audit_events": [
+    {
+      "event_type": "document_ingested",
+      "event_data": {
+        "document_id": "aapl_10k_2024",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240930.htm",
+        "filing_date": "2024-03-15",
+        "document_type": "10-K"
+      },
+      "user_id": "data_pipeline@company.com",
+      "description": "Apple Inc. annual report ingestion"
+    },
+    {
+      "event_type": "document_processed",
+      "event_data": {
+        "document_id": "aapl_10k_2024",
+        "chunks_created": 487,
+        "embeddings_created": 487,
+        "processing_time_seconds": 12.5
+      },
+      "user_id": "data_pipeline@company.com",
+      "description": "Document chunking and embedding completed"
+    },
+    {
+      "event_type": "query_executed",
+      "event_data": {
+        "query_id": "q_20241115_001",
+        "query_text": "What was Apple's revenue in Q4 2024?"
+      },
+      "user_id": "analyst@company.com",
+      "description": "Financial analyst query"
+    },
+    {
+      "event_type": "retrieval_completed",
+      "event_data": {
+        "query_id": "q_20241115_001",
+        "chunks_retrieved": [
+          {
+            "chunk_id": "aapl_10k_2024#chunk_127",
+            "page_num": 28,
+            "score": 0.87,
+            "text_preview": "Revenue for Q4 2024 was $94.9B, up 6% year-over-year..."
+          },
+          {
+            "chunk_id": "aapl_10k_2024#chunk_128",
+            "page_num": 28,
+            "score": 0.84,
+            "text_preview": "iPhone revenue contributed $46.2B to total revenue..."
+          },
+          {
+            "chunk_id": "aapl_10k_2024#chunk_45",
+            "page_num": 12,
+            "score": 0.79,
+            "text_preview": "Quarterly results breakdown by product category..."
+          }
+        ],
+        "num_chunks": 3
+      },
+      "user_id": "analyst@company.com",
+      "description": "Provenance tracking for retrieved chunks"
+    },
+    {
+      "event_type": "generation_completed",
+      "event_data": {
+        "query_id": "q_20241115_001",
+        "answer_preview": "According to Apple's 10-K filing for fiscal year 2024, Q4 revenue was $94.9B, representing a 6% year-over-year increase. iPhone revenue contributed $46.2B...",
+        "citations": [
+          "[1] AAPL 10-K FY2024, p.28",
+          "[2] AAPL 10-K FY2024, p.12"
+        ],
+        "model_used": "gpt-4"
+      },
+      "user_id": "analyst@company.com",
+      "description": "LLM-generated answer with citations"
+    },
+    {
+      "event_type": "document_ingested",
+      "event_data": {
+        "document_id": "msft_10q_2024_q3",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000156459024012345/msft-10q_20240930.htm",
+        "filing_date": "2024-10-25",
+        "document_type": "10-Q"
+      },
+      "user_id": "data_pipeline@company.com",
+      "description": "Microsoft quarterly report ingestion"
+    },
+    {
+      "event_type": "query_executed",
+      "event_data": {
+        "query_id": "q_20241115_002",
+        "query_text": "Compare cloud revenue growth between Apple and Microsoft"
+      },
+      "user_id": "executive@company.com",
+      "description": "Executive comparative analysis query"
+    }
+  ],
+  "metadata": {
+    "source": "example_data",
+    "purpose": "demonstration",
+    "note": "These are sample audit events for testing the audit trail system"
+  }
+}
