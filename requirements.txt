@@ -1,0 +1,29 @@
+# L3 M7.1: Financial Document Types & Regulatory Context
+# Production dependencies with pinned versions
+
+# Core web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# EDGAR/SEC data access
+# Note: Install sec-edgar-downloader for production EDGAR integration
+# sec-edgar-downloader==5.0.3
+requests==2.31.0
+
+# Data processing
+pandas==2.1.3
+python-dotenv==1.0.0
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+httpx==0.25.1
+
+# Jupyter notebooks
+jupyter==1.0.0
+ipykernel==6.26.0
+nbformat==5.9.2
+
+# Utilities
+python-dateutil==2.8.2

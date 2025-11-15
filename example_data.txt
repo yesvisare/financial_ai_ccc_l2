@@ -1,0 +1,130 @@
+Sample Financial Documents for L3 M7.1 Testing
+
+=== SAMPLE 1: 10-K ANNUAL REPORT ===
+FORM 10-K
+ANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
+For the fiscal year ended December 31, 2023
+Commission File Number: 001-12345
+
+CERTIFICATION PURSUANT TO SECTION 302 OF THE SARBANES-OXLEY ACT
+I, John Smith, Chief Executive Officer, certify that I have reviewed this annual report and based on my knowledge, this report does not contain any untrue statement of a material fact.
+
+=== SAMPLE 2: 10-Q QUARTERLY REPORT ===
+FORM 10-Q
+QUARTERLY REPORT PURSUANT TO SECTION 13 OR 15(d)
+For the quarterly period ended March 31, 2024
+(Unaudited)
+
+PART I - FINANCIAL INFORMATION
+Condensed Consolidated Financial Statements
+
+=== SAMPLE 3: 8-K MATERIAL EVENT ===
+FORM 8-K
+CURRENT REPORT
+Date of Report: January 15, 2024
+
+Item 1.01 Entry into a Material Definitive Agreement
+The Company entered into an Asset Purchase Agreement to acquire TargetCo for $150 million.
+
+=== SAMPLE 4: EARNINGS CALL TRANSCRIPT ===
+Q4 2023 Earnings Call Transcript
+Operator: Welcome to the earnings conference call.
+CEO: Record quarterly revenue of $2.5 billion, up 15% year-over-year.
+Analyst: Can you provide Q1 2024 guidance?
+CFO: We expect Q1 revenue of $2.3-$2.4 billion.
+
+=== SAMPLE 5: CREDIT REPORT ===
+CONSUMER CREDIT REPORT
+Source: Equifax
+Credit Score: 720 (FICO)
+SSN: XXX-XX-1234
+Payment History: Current on all accounts
+
+=== SAMPLE 6: LOAN APPLICATION ===
+MORTGAGE LOAN APPLICATION
+Income Verification: $150,000 annual salary
+Employment History: 5 years at current employer
+Debt-to-Income Ratio: 28%
+Loan Amount Requested: $500,000
+
+=== SAMPLE 7: INTERNAL M&A ANALYSIS ===
+INTERNAL USE ONLY - CONFIDENTIAL
+M&A Target Analysis
+Target Revenue: $850M
+Purchase Price: $2.8B (15.6x EBITDA)
+Expected Synergies: $75M annually
+
+=== SAMPLE 8: INVESTMENT PROSPECTUS ===
+PROSPECTUS
+Filed pursuant to Rule 424(b)(3)
+Securities Act of 1933 Registration
+$500,000,000 Common Shares Offering
+
+=== MATERIAL EVENT KEYWORDS ===
+bankruptcy
+chapter 11
+asset sale
+acquisition
+merger
+management change
+ceo resign
+cfo resign
+accounting restatement
+material impairment
+regulatory investigation
+sec inquiry
+
+=== FINANCIAL TERMINOLOGY ===
+EBITDA - Earnings Before Interest, Taxes, Depreciation, Amortization
+Diluted EPS - Earnings Per Share accounting for dilution
+Covenant Compliance - Loan agreement restrictions
+MD&A - Management's Discussion & Analysis
+Material Events - Events affecting investor decisions
+Internal Controls - Financial accuracy processes
+
+=== REGULATORY FRAMEWORKS ===
+SOX 302 - CEO/CFO Certification (20 years imprisonment penalty)
+SOX 404 - Internal Controls (7-year retention)
+Regulation FD - Fair Disclosure (no selective disclosure)
+GLBA - Financial privacy and data protection
+FCRA - Credit report accuracy (7-year retention)
+GDPR Article 25 - Data Protection by Design (4% revenue fine)
+ECOA - Equal Credit Opportunity (25-month retention)
+Securities Act 1933 - Prospectus registration
+
+=== COMPLIANCE FAILURES (CASE STUDIES) ===
+Tesla CEO Tweet (2018) - $20M fine for 8-K violation
+Netflix CEO Facebook Post (2013) - $5M fine for Reg FD violation
+Equifax Breach (2017) - $700M settlement, 147M records exposed
+Hedge Fund Insider Trading (2015) - Intern accessed M&A analysis
+
+=== PII DETECTION EXAMPLES ===
+SSN: 123-45-6789
+Phone: 555-123-4567
+Email: customer@example.com
+Account Number: 1234567890
+DOB: 01/15/1980
+Address: 123 Main Street, Anytown, USA
+
+=== RETENTION PERIODS ===
+10-K: 7 years (SOX 404)
+10-Q: 7 years (SOX 404)
+8-K: 7 years (SOX compliance)
+Earnings Transcripts: 7 years (Reg FD)
+Credit Reports: 7 years (FCRA)
+Loan Applications: 3 years (ECOA 25 months minimum)
+Internal Analysis: 7 years (SOX 404)
+Prospectus: Permanent (investor fraud claims)
+
+=== SENSITIVITY CLASSIFICATIONS ===
+Public: Filed SEC documents, published earnings transcripts
+MNPI: Unfiled 10-K/10-Q/8-K, earnings calls during broadcast, internal M&A analysis
+PII: Credit reports, loan applications, customer data
+
+=== ACCESS CONTROL ROLES ===
+Executive: Access to Public, MNPI, PII
+Compliance Officer: Access to Public, MNPI, PII
+Analyst: Access to Public, MNPI
+Auditor: Access to Public, MNPI
+Credit Officer: Access to Public, PII
+Employee: Access to Public only

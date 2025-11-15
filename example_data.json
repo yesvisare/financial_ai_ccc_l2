@@ -1,0 +1,199 @@
+{
+  "document_samples": [
+    {
+      "id": "sample_10k",
+      "type": "10-K Annual Report",
+      "content": "FORM 10-K\nANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934\nFor the fiscal year ended December 31, 2023\nCommission File Number: 001-12345\n\nCERTIFICATION PURSUANT TO SECTION 302 OF THE SARBANES-OXLEY ACT\nI, John Smith, Chief Executive Officer, certify that:\n1. I have reviewed this annual report on Form 10-K\n2. Based on my knowledge, this report does not contain any untrue statement of a material fact",
+      "is_filed": true,
+      "metadata": {
+        "fiscal_year": 2023,
+        "filing_deadline": "90 days post fiscal year-end",
+        "retention_years": 7
+      }
+    },
+    {
+      "id": "sample_10q",
+      "type": "10-Q Quarterly Report",
+      "content": "FORM 10-Q\nQUARTERLY REPORT PURSUANT TO SECTION 13 OR 15(d)\nFor the quarterly period ended March 31, 2024\n(Unaudited)\n\nPART I - FINANCIAL INFORMATION\nItem 1. Financial Statements (Unaudited)\nCondensed Consolidated Balance Sheets\nCondensed Consolidated Statements of Income",
+      "is_filed": false,
+      "metadata": {
+        "quarter": "Q1",
+        "fiscal_year": 2024,
+        "filing_deadline": "45 days post quarter-end",
+        "retention_years": 7
+      }
+    },
+    {
+      "id": "sample_8k",
+      "type": "8-K Material Event Disclosure",
+      "content": "FORM 8-K\nCURRENT REPORT\nDate of Report (Date of earliest event reported): January 15, 2024\n\nItem 1.01 Entry into a Material Definitive Agreement\nOn January 15, 2024, the Company entered into an Asset Purchase Agreement to acquire substantially all assets of TargetCo for $150 million in cash.",
+      "is_filed": false,
+      "metadata": {
+        "event_date": "2024-01-15",
+        "filing_deadline": "4 business days",
+        "material_event": "acquisition"
+      }
+    },
+    {
+      "id": "sample_earnings_transcript",
+      "type": "Earnings Call Transcript",
+      "content": "Q4 2023 Earnings Call Transcript\nJanuary 25, 2024\n\nOperator: Good morning and welcome to the fourth quarter 2023 earnings conference call.\n\nCEO: Thank you for joining us today. I'm pleased to report record quarterly revenue of $2.5 billion, up 15% year-over-year.\n\nCFO: Our diluted EPS came in at $1.25, exceeding guidance of $1.15-$1.20.\n\nAnalyst (Morgan Stanley): Can you provide guidance for Q1 2024?\n\nCFO: We expect Q1 revenue in the range of $2.3-$2.4 billion with diluted EPS of $1.10-$1.15.",
+      "is_filed": true,
+      "metadata": {
+        "call_date": "2024-01-25",
+        "attendees": ["institutional_investors", "retail_investors", "analysts"],
+        "regulation": "Regulation FD"
+      }
+    },
+    {
+      "id": "sample_credit_report",
+      "type": "Credit Report",
+      "content": "CONSUMER CREDIT REPORT\nReport Date: 2024-02-01\nSource: Equifax\n\nPersonal Information:\nName: [REDACTED]\nSSN: XXX-XX-1234\nDOB: [REDACTED]\nAddress: [REDACTED]\n\nCredit Score: 720 (FICO)\n\nCredit Accounts:\n- Credit Card (Bank of America): $5,000 limit, $1,200 balance, Current\n- Auto Loan (Toyota Financial): $25,000 original, $18,000 balance, Current\n- Mortgage (Wells Fargo): $350,000 original, $320,000 balance, Current\n\nPayment History: 100% on-time payments (36 months)",
+      "is_filed": false,
+      "metadata": {
+        "pii_fields": ["SSN", "name", "DOB", "address", "account_numbers"],
+        "regulations": ["FCRA", "GLBA", "GDPR Article 25"],
+        "retention_years": 7,
+        "access_requires_consent": true
+      }
+    },
+    {
+      "id": "sample_loan_application",
+      "type": "Loan Application",
+      "content": "MORTGAGE LOAN APPLICATION\nApplication Date: 2024-03-01\n\nApplicant Information:\nName: [REDACTED]\nSSN: [REDACTED]\nDOB: [REDACTED]\nEmployer: TechCorp Inc.\nJob Title: Software Engineer\nEmployment Duration: 5 years\nAnnual Income: $150,000\n\nLoan Details:\nLoan Amount Requested: $500,000\nLoan Purpose: Home Purchase\nProperty Address: [REDACTED]\n\nFinancial Information:\nBank Statements: Attached (last 3 months)\nTax Returns: Attached (last 2 years)\nDebt-to-Income Ratio: 28%\nDown Payment: $100,000 (20%)",
+      "is_filed": false,
+      "metadata": {
+        "regulations": ["GLBA", "ECOA", "Fair Housing Act"],
+        "retention_years": 3,
+        "ecoa_minimum_retention_months": 25,
+        "requires_adverse_action_tracking": true
+      }
+    },
+    {
+      "id": "sample_internal_analysis",
+      "type": "Internal Financial Analysis",
+      "content": "INTERNAL USE ONLY - CONFIDENTIAL\n\nM&A Target Analysis: AcquisitionCo\nInvestment Committee Memo\nDate: March 15, 2024\n\nExecutive Summary:\nProposed acquisition of AcquisitionCo for $2.8 billion represents strategic expansion into cloud services market.\n\nFinancial Analysis:\n- Target Revenue (2023): $850M\n- Target EBITDA (2023): $180M\n- Purchase Price: $2.8B (15.6x EBITDA)\n- Expected Synergies: $75M annually\n- IRR: 18%\n- Payback Period: 6 years\n\nBudget Variance Analysis Q1 2024:\n- Revenue: $2.3B actual vs. $2.2B budget (+4.5%)\n- Operating Expenses: $1.8B actual vs. $1.7B budget (+5.9%)\n- EBITDA: $500M actual vs. $500M budget (0%)",
+      "is_filed": false,
+      "metadata": {
+        "sensitivity": "MNPI",
+        "access_control": "executive_only",
+        "regulations": ["SOX 404"],
+        "retention_years": 7,
+        "requires_audit_trail": true
+      }
+    },
+    {
+      "id": "sample_prospectus",
+      "type": "Investment Prospectus",
+      "content": "PROSPECTUS\nFiled pursuant to Rule 424(b)(3)\nRegistration No. 333-12345\n\nOFFERING MEMORANDUM\nGrowthFund REIT\n$500,000,000 Common Shares\n\nInvestment Objectives:\nThe Fund seeks to provide investors with current income and long-term capital appreciation through investments in commercial real estate.\n\nRisk Factors:\n- Real estate values may decline due to economic conditions\n- Interest rate increases may negatively impact property values\n- Illiquidity of real estate investments\n- Leverage risks from mortgage financing\n\nSecurities Act of 1933 Registration\nThis offering has been registered with the SEC.",
+      "is_filed": true,
+      "metadata": {
+        "regulations": ["Securities Act of 1933"],
+        "retention": "Permanent",
+        "requires_legal_review": true,
+        "version_control_required": true
+      }
+    }
+  ],
+  "material_events": [
+    {
+      "event": "bankruptcy",
+      "description": "Company filed for Chapter 11 bankruptcy protection",
+      "requires_8k": true,
+      "filing_deadline": "4 business days"
+    },
+    {
+      "event": "acquisition",
+      "description": "Material acquisition or merger announcement",
+      "requires_8k": true,
+      "filing_deadline": "4 business days"
+    },
+    {
+      "event": "management_change",
+      "description": "CEO or CFO resignation/termination",
+      "requires_8k": true,
+      "filing_deadline": "4 business days"
+    },
+    {
+      "event": "accounting_restatement",
+      "description": "Material accounting error requiring restatement",
+      "requires_8k": true,
+      "filing_deadline": "4 business days"
+    },
+    {
+      "event": "asset_sale",
+      "description": "Sale of material assets",
+      "requires_8k": true,
+      "filing_deadline": "4 business days"
+    }
+  ],
+  "regulatory_frameworks": {
+    "SOX_302": {
+      "name": "Sarbanes-Oxley Section 302",
+      "description": "CEO/CFO Certification",
+      "penalty": "Up to 20 years imprisonment for knowingly false certification",
+      "applies_to": ["10-K", "10-Q"]
+    },
+    "SOX_404": {
+      "name": "Sarbanes-Oxley Section 404",
+      "description": "Internal Controls Over Financial Reporting",
+      "retention_years": 7,
+      "applies_to": ["10-K", "10-Q", "Internal Analysis"]
+    },
+    "REG_FD": {
+      "name": "Regulation FD (Fair Disclosure)",
+      "description": "Prohibits selective disclosure of material information",
+      "example_violation": "Netflix CEO Facebook post (2013) - $5M fine",
+      "applies_to": ["8-K", "Earnings Transcripts"]
+    },
+    "GLBA": {
+      "name": "Gramm-Leach-Bliley Act",
+      "description": "Financial privacy and data protection",
+      "requirements": ["Privacy Notice", "Safeguards Rule", "Access Logging"],
+      "applies_to": ["Credit Reports", "Loan Applications"]
+    },
+    "FCRA": {
+      "name": "Fair Credit Reporting Act",
+      "description": "Credit report accuracy and consumer rights",
+      "retention_years": 7,
+      "applies_to": ["Credit Reports"]
+    },
+    "GDPR_ARTICLE_25": {
+      "name": "GDPR Article 25",
+      "description": "Data Protection by Design",
+      "max_fine": "4% of global revenue or €20M (whichever higher)",
+      "applies_to": ["Credit Reports", "Customer PII"]
+    },
+    "ECOA": {
+      "name": "Equal Credit Opportunity Act",
+      "description": "Prohibits credit discrimination",
+      "minimum_retention_months": 25,
+      "applies_to": ["Loan Applications"]
+    }
+  },
+  "financial_terminology": {
+    "EBITDA": "Earnings Before Interest, Taxes, Depreciation, Amortization",
+    "Diluted_EPS": "Earnings Per Share (accounting for potential equity dilution)",
+    "Covenant_Compliance": "Adherence to loan agreement financial restrictions",
+    "Material_Events": "Occurrences materially affecting investor decisions",
+    "MD&A": "Management's Discussion & Analysis - CFO narrative explaining performance",
+    "Internal_Controls": "Processes ensuring financial data accuracy"
+  },
+  "compliance_checklist": [
+    "CFO approval for financial accuracy",
+    "Chief Compliance Officer review",
+    "Securities counsel approval",
+    "External auditor assessment",
+    "Data retention policy enforcement (7-year SOX minimum)",
+    "Audit trail implementation",
+    "Access control matrix (role-based)",
+    "PII detection and redaction (99.9% recall threshold)",
+    "Adverse action tracking",
+    "Dispute workflow for credit reports",
+    "Version control for prospectuses",
+    "Material event detection and legal review escalation",
+    "Regulation FD compliance monitoring",
+    "GDPR Right to be Forgotten implementation",
+    "Third-party vendor assessment"
+  ]
+}

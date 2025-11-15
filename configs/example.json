@@ -1,0 +1,60 @@
+{
+  "description": "Example configuration for L3 M7.1 Financial Compliance Controls",
+  "document_types": [
+    "10-K Annual Report",
+    "10-Q Quarterly Report",
+    "8-K Material Event Disclosure",
+    "Earnings Call Transcript",
+    "Credit Report",
+    "Loan Application",
+    "Internal Financial Analysis",
+    "Investment Prospectus"
+  ],
+  "regulatory_frameworks": [
+    "SOX Section 302",
+    "SOX Section 404",
+    "Regulation FD",
+    "GLBA",
+    "FCRA",
+    "GDPR Article 25",
+    "Securities Act 1933",
+    "ECOA",
+    "Fair Housing Act"
+  ],
+  "retention_policies": {
+    "sox_minimum_years": 7,
+    "ecoa_minimum_months": 25,
+    "prospectus_retention": "permanent"
+  },
+  "pii_detection": {
+    "recall_threshold": 0.999,
+    "patterns": ["SSN", "Phone", "Email", "Account Number", "DOB", "Address"]
+  },
+  "access_control": {
+    "roles": ["executive", "compliance_officer", "analyst", "auditor", "credit_officer", "employee"],
+    "sensitivity_levels": ["Public", "MNPI", "PII"]
+  },
+  "material_events": {
+    "filing_deadline_days": 4,
+    "keywords": [
+      "bankruptcy",
+      "acquisition",
+      "merger",
+      "management_change",
+      "accounting_restatement",
+      "material_impairment"
+    ]
+  },
+  "compliance_settings": {
+    "require_cfo_approval": true,
+    "require_legal_review": true,
+    "require_external_audit": true,
+    "audit_trail_enabled": true,
+    "version_control_enabled": true
+  },
+  "api_settings": {
+    "timeout_seconds": 30,
+    "max_retries": 3,
+    "rate_limit_per_minute": 100
+  }
+}
