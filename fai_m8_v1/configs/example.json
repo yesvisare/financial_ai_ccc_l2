@@ -1,0 +1,17 @@
+{
+  "queries": [],
+  "settings": {
+    "timeout": 30,
+    "max_retries": 3,
+    "embedding_model": "all-MiniLM-L6-v2",
+    "embedding_dimensions": 384,
+    "batch_size": 100,
+    "context_type": "financial_analysis"
+  },
+  "performance_targets": {
+    "semantic_accuracy": 0.88,
+    "latency_p95_ms": 100,
+    "false_positive_rate": 0.05,
+    "expansion_coverage": 0.90
+  }
+}

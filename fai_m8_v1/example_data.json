@@ -1,0 +1,66 @@
+{
+  "queries": [
+    "Apple reported EPS of $1.52. P/E ratio stands at 28.",
+    "Our DCF model uses WACC of 8.5% and projects FCF growth of 12%.",
+    "The PE firm invested $500M in the IPO",
+    "EBITDA increased YoY by 15% while ROIC exceeded WACC",
+    "Q1 FY2024 results show strong ROE and ROA performance",
+    "SEC filing indicates SOX compliance with GAAP standards",
+    "Balance sheet shows A/R up 20%, A/P stable, COGS decreased",
+    "M&A activity driven by VC and PE firms targeting high-growth IPOs",
+    "NPV analysis using CAPM shows IRR above hurdle rate",
+    "Compare P/B, P/S, and EV/EBITDA ratios across peers"
+  ],
+  "test_pairs": [
+    {
+      "text1": "EBITDA increased significantly",
+      "text2": "Operating profit grew substantially",
+      "expected_similarity": 0.85,
+      "description": "Financial synonyms should have high similarity"
+    },
+    {
+      "text1": "NASA launched a rocket",
+      "text2": "EBITDA increased last quarter",
+      "expected_similarity": 0.1,
+      "description": "Unrelated concepts should have low similarity"
+    },
+    {
+      "text1": "Company's EPS rose 15%",
+      "text2": "Earnings per share grew by 15%",
+      "expected_similarity": 0.95,
+      "description": "Acronym and expansion should be nearly identical"
+    },
+    {
+      "text1": "P/E ratio indicates valuation",
+      "text2": "Stock price seems expensive",
+      "expected_similarity": 0.7,
+      "description": "Related valuation concepts"
+    }
+  ],
+  "ambiguous_examples": [
+    {
+      "text": "PE firm acquired the company",
+      "term": "PE",
+      "possible_meanings": ["Private Equity", "Price-to-Earnings"],
+      "correct_in_context": "Private Equity"
+    },
+    {
+      "text": "The P/E ratio is 28x",
+      "term": "PE",
+      "possible_meanings": ["Private Equity", "Price-to-Earnings"],
+      "correct_in_context": "Price-to-Earnings"
+    }
+  ],
+  "metadata": {
+    "source": "L3_M8.1_augmented_script",
+    "purpose": "demonstration_and_testing",
+    "categories": [
+      "earnings",
+      "valuation",
+      "analysis",
+      "regulatory",
+      "balance_sheet",
+      "market_terms"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+Apple Inc. Q1 FY2024 Financial Results
+
+Apple reported EPS of $1.52, beating analyst expectations. The P/E ratio stands at 28,
+indicating strong investor confidence. EBITDA increased 15% YoY, driven by improved
+operational efficiency and margin expansion.
+
+Valuation Analysis
+
+Our DCF model uses a WACC of 8.5% based on current market conditions. The analysis
+projects FCF growth of 12% over the next five years, with terminal value calculated
+using the perpetuity growth method. The resulting NPV suggests the stock is fairly valued.
+
+Balance Sheet Highlights
+
+A/R increased by 20% QoQ, reflecting strong sales momentum. A/P remained stable,
+indicating healthy supplier relationships. COGS decreased as a percentage of revenue,
+contributing to improved gross margins. SG&A expenses were well-controlled at 15% of revenue.
+
+Profitability Metrics
+
+ROE improved to 45%, significantly above industry average. ROIC exceeded WACC by 8 percentage
+points, demonstrating value creation. ROA of 18% reflects efficient asset utilization.
+ROTA metrics show consistent improvement TTM.
+
+M&A Activity and Market Trends
+
+PE firms have been active in the technology sector, with several high-profile LBO transactions.
+VC funding remains robust, supporting early-stage innovation. Recent IPO activity has been
+strong, with multiple successful offerings. M&A multiples based on EV/EBITDA and EV/Sales
+remain elevated.
+
+Regulatory Compliance
+
+The company maintains strict SOX compliance and follows GAAP standards in all financial
+reporting. SEC filings are current and complete. FINRA regulations are observed for all
+securities transactions. The company is preparing for MiFID II requirements for European operations.
+
+Analyst Estimates
+
+Q2 estimates project continued EPS growth with PEG ratio below 1.5, suggesting attractive
+valuation relative to growth. P/B ratio of 12x reflects strong intangible asset value.
+P/S ratio of 6x is in line with peer group averages.
+
+Investment Thesis
+
+The combination of strong FCF generation, disciplined capital allocation, and improving IRR
+on new projects supports our positive outlook. CAPM-based required return of 10% is below
+the expected return, creating a margin of safety for investors.
