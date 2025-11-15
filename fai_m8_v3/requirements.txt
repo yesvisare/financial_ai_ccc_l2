@@ -1,0 +1,41 @@
+# Core Dependencies
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+pydantic==2.9.0
+
+# Transformer Models (FinBERT)
+transformers==4.45.0
+torch==2.5.0
+tokenizers==0.20.0
+
+# NLP Libraries
+spacy==3.8.0
+# Run: python -m spacy download en_core_web_sm
+
+# HTTP & Web Scraping
+requests==2.32.0
+urllib3==2.2.0
+
+# Wikipedia Integration
+wikipedia==1.4.0
+
+# Market Data (Optional)
+yfinance==0.2.44
+
+# Caching & Database (Optional)
+redis==5.0.0
+psycopg2-binary==2.9.9
+
+# Testing
+pytest==8.3.0
+pytest-asyncio==0.24.0
+pytest-cov==5.0.0
+httpx==0.27.0
+
+# Development & Notebooks
+jupyter==1.1.0
+ipykernel==6.29.0
+notebook==7.2.0
+
+# Utilities
+python-dotenv==1.0.0

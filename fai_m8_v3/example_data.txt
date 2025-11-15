@@ -1,0 +1,74 @@
+Apple Inc. (AAPL) reported strong quarterly earnings with revenue of $89.5 billion.
+Tim Cook, CEO of Apple, discussed supply chain challenges in Southeast Asia.
+The company's Services segment grew 15% year-over-year, reaching $22.3 billion.
+iPhone sales in China faced headwinds due to increased local competition.
+
+Tesla Inc. (TSLA) announced new battery technology with 20% cost reduction.
+Elon Musk, CEO of Tesla, outlined plans for Gigafactory expansion in Texas.
+The company delivered 435,000 vehicles in Q3 2024, a 30% increase.
+Tesla's energy storage deployments reached 4.0 GWh, up 90% year-over-year.
+
+JPMorgan Chase & Co. (JPM) posted Q3 earnings of $4.37 per share.
+Jamie Dimon, Chairman and CEO, highlighted resilient consumer spending patterns.
+Investment banking fees increased 25%, driven by M&A advisory activity.
+The bank's credit loss provisions remained stable at $1.4 billion.
+
+Microsoft Corporation (MSFT) expanded Azure cloud services globally.
+Satya Nadella, CEO, emphasized AI integration across Office 365 suite.
+Azure revenue grew 29% in constant currency, outpacing AWS growth rate.
+GitHub Copilot achieved 1.3 million paid subscribers within 18 months.
+
+Amazon.com Inc. (AMZN) reported AWS revenue of $23.1 billion in Q3.
+Andy Jassy, CEO, announced Prime membership price stability despite inflation.
+Operating margin for AWS improved to 30%, highest in company history.
+Amazon's advertising business grew 26%, reaching $12.1 billion quarterly.
+
+Goldman Sachs Group Inc. (GS) increased fintech investment by $500 million.
+David Solomon, CEO, outlined digital banking expansion strategy.
+Marcus by Goldman Sachs reached 14 million customers in retail banking.
+The firm's fixed income trading revenue declined 8% year-over-year.
+
+Meta Platforms Inc. (META) reported declining advertising revenue in Q3.
+Mark Zuckerberg, CEO, detailed $10 billion annual metaverse investment.
+Reality Labs division posted $3.7 billion operating loss for the quarter.
+Daily active users across Facebook, Instagram, WhatsApp reached 3.14 billion.
+
+Alphabet Inc. (GOOGL) Google Cloud achieved $8.4 billion in revenue.
+Sundar Pichai, CEO, highlighted AI-powered search enhancements.
+YouTube advertising revenue grew 12%, rebounding from prior quarter decline.
+The company's Other Bets segment reduced operating losses by 20%.
+
+Bank of America Corporation (BAC) disclosed $2.1 trillion credit exposure.
+Brian Moynihan, CEO, emphasized disciplined lending standards.
+Net interest income increased to $14.2 billion, up 9% year-over-year.
+The bank's wealth management assets under management reached $3.4 trillion.
+
+Wells Fargo & Company (WFC) mortgage lending declined 30% amid rate hikes.
+Charlie Scharf, CEO, announced expense reduction initiatives targeting $3 billion.
+Net interest margin compressed to 2.75% from 2.89% in prior quarter.
+The company resolved legacy regulatory issues with $1.7 billion settlement.
+
+NVIDIA Corporation (NVDA) AI chip sales surged to data center customers.
+Jensen Huang, CEO, projected continued strong demand through 2025.
+Data center revenue reached $14.5 billion, up 170% year-over-year.
+The company's gaming segment stabilized after two quarters of decline.
+
+Intel Corporation (INTC) disclosed manufacturing delays for 7nm chips.
+Pat Gelsinger, CEO, outlined $20 billion foundry investment in Ohio.
+Client computing revenue declined 17%, reflecting PC market weakness.
+Intel's automotive division Mobileye revenue grew 38% year-over-year.
+
+Advanced Micro Devices Inc. (AMD) gained server processor market share.
+Lisa Su, CEO, reported data center revenue of $1.6 billion, up 21%.
+EPYC server processor adoption increased across cloud providers.
+The company's XLNX acquisition synergies exceeded $300 million annually.
+
+Boeing Company (BA) provided 737 MAX production updates amid safety reviews.
+Dave Calhoun, CEO, committed to quality improvements across manufacturing.
+Commercial deliveries totaled 105 aircraft in Q3, below guidance.
+The company's defense division faced $1.1 billion in contract charges.
+
+Berkshire Hathaway Inc. (BRK.A) portfolio changes revealed in 13F filing.
+Warren Buffett, Chairman, increased Apple holdings to $177 billion.
+The conglomerate's cash position reached $157 billion, a record high.
+Operating earnings rose 20% driven by insurance underwriting profits.

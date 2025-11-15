@@ -1,0 +1,42 @@
+{
+  "model_config": {
+    "finbert_model_path": "ProsusAI/finbert",
+    "confidence_threshold": 0.75,
+    "entity_link_threshold": 0.85
+  },
+  "sec_edgar_config": {
+    "user_agent": "FinancialRAG contact@example.com",
+    "rate_limit_delay": 0.1,
+    "timeout": 10
+  },
+  "wikipedia_config": {
+    "max_search_results": 5,
+    "summary_sentences": 3
+  },
+  "cache_config": {
+    "enabled": false,
+    "ttl_seconds": 86400,
+    "redis_host": "localhost",
+    "redis_port": 6379,
+    "redis_db": 0
+  },
+  "database_config": {
+    "enabled": false,
+    "host": "localhost",
+    "port": 5432,
+    "database": "financial_entities",
+    "user": "postgres"
+  },
+  "enrichment_config": {
+    "enabled": true,
+    "yfinance_enabled": true,
+    "include_market_cap": true,
+    "include_industry": true,
+    "include_ratios": true
+  },
+  "processing_config": {
+    "batch_size": 10,
+    "max_parallel": 5,
+    "use_gpu": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "queries": [
+    "What did Tim Cook say about Apple's supply chain?",
+    "Tesla battery technology developments in Q3 2024",
+    "JPMorgan Chase quarterly earnings report",
+    "Microsoft CEO Satya Nadella compensation details",
+    "Amazon's AWS revenue growth year-over-year",
+    "Goldman Sachs investment in fintech startups",
+    "Meta Platforms advertising revenue decline",
+    "Alphabet's Google Cloud quarterly performance",
+    "Bank of America credit risk exposure",
+    "Wells Fargo mortgage lending statistics",
+    "Warren Buffett's Berkshire Hathaway portfolio changes",
+    "Nvidia AI chip sales to data centers",
+    "Intel manufacturing delays and roadmap",
+    "AMD market share in server processors",
+    "Boeing 737 MAX production updates"
+  ],
+  "sample_texts": [
+    "Apple Inc. (AAPL) reported strong quarterly earnings. CEO Tim Cook discussed supply chain challenges and highlighted 15% revenue growth in the Services segment.",
+    "Tesla Inc. (TSLA) announced breakthrough battery technology developments. The company expects 20% cost reduction per kilowatt-hour by Q4 2024.",
+    "JPMorgan Chase (JPM) posted Q3 earnings of $4.37 per share, beating analyst expectations. The investment banking division saw 25% year-over-year growth.",
+    "Microsoft Corporation (MSFT) expanded Azure cloud services. CEO Satya Nadella emphasized AI integration across all product lines.",
+    "Amazon Web Services (AWS) revenue grew 20% year-over-year, reaching $23.1 billion in Q3 2024. Operating margin improved to 30%.",
+    "Goldman Sachs (GS) increased investment in fintech startups by $500 million. The firm targets blockchain-based settlement infrastructure.",
+    "Meta Platforms Inc. (META) reported declining advertising revenue amid increased competition. CEO Mark Zuckerberg outlined metaverse investment strategy.",
+    "Alphabet Inc. (GOOGL) Google Cloud achieved $8.4 billion in quarterly revenue. The division approaches profitability with 37% growth rate.",
+    "Bank of America Corporation (BAC) disclosed credit risk exposure of $2.1 trillion across commercial and consumer portfolios.",
+    "Wells Fargo & Company (WFC) mortgage lending declined 30% year-over-year due to rising interest rates and reduced refinancing activity."
+  ],
+  "metadata": {
+    "source": "script_examples",
+    "purpose": "demonstration_and_testing",
+    "domain": "financial_entity_recognition",
+    "total_entities": 45,
+    "entity_types": ["ORGANIZATION", "PERSON", "FINANCIAL_INSTRUMENT", "FINANCIAL_METRIC"],
+    "test_coverage": "earnings_reports,market_data,executive_commentary,sector_analysis"
+  }
+}
