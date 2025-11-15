@@ -1,0 +1,36 @@
+{
+  "enrichment_config": {
+    "ttl_settings": {
+      "stock_price": 60,
+      "company_info": 86400,
+      "market_status": 300
+    },
+    "cache_enabled": true,
+    "max_retries": 3,
+    "timeout_seconds": 10
+  },
+  "popular_tickers": [
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "AMZN",
+    "TSLA",
+    "NVDA"
+  ],
+  "api_config": {
+    "yfinance": {
+      "enabled": true,
+      "rate_limit_per_hour": 2000
+    },
+    "alpha_vantage": {
+      "enabled": false,
+      "api_key": "",
+      "rate_limit_per_minute": 5
+    }
+  },
+  "monitoring": {
+    "target_cache_hit_rate": 60,
+    "alert_on_failure_rate": 10,
+    "log_level": "INFO"
+  }
+}

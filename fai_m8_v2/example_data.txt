@@ -1,0 +1,51 @@
+Sample Financial Queries for Testing
+======================================
+
+Basic Price Queries:
+- What is the current price of AAPL?
+- Show me MSFT stock price
+- How is Tesla trading today?
+
+Performance Queries:
+- How has the market performed today?
+- Show me real-time data for Tesla
+- What's Apple's performance this quarter?
+- Compare GOOGL and AMZN today
+
+Portfolio Queries:
+- What's the current value of my AAPL holdings?
+- Show me portfolio performance for AAPL, MSFT, GOOGL
+- Calculate current value: 100 shares AAPL, 50 shares MSFT
+
+Company Analysis Queries:
+- What's Microsoft's current market cap?
+- Show me Apple's P/E ratio
+- What's Tesla's 52-week high and low?
+
+Market Status Queries:
+- Is the market open right now?
+- When does the market close today?
+- Show me pre-market prices for AAPL
+
+Historical Context Queries:
+- How did Apple perform in 2020? (should NOT enrich)
+- Who is Apple's CEO? (should NOT enrich)
+- What does the 10-K say about risk factors? (should NOT enrich)
+
+Sample Tickers:
+AAPL, MSFT, GOOGL, AMZN, TSLA, NVDA, META, JPM, BAC, GS
+
+Sample Document Texts:
+----------------------
+Apple Inc. reported strong Q1 2024 earnings with revenue of $94.9B, beating analyst
+expectations of $93.2B. The company saw growth across all product segments, with iPhone
+sales driving the majority of revenue.
+
+Tesla announced delivery numbers for Q4 2023, showing a 10% increase year-over-year.
+The company continues to expand production capacity at its Gigafactories worldwide.
+
+Microsoft's cloud business Azure grew 30% year-over-year, driving overall revenue growth.
+The company reported $62B in quarterly revenue, with AI investments showing strong returns.
+
+Google parent Alphabet reported advertising revenue growth despite economic headwinds.
+YouTube and Search continue to be core revenue drivers for the company.

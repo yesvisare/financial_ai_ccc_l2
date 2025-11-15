@@ -1,0 +1,32 @@
+{
+  "queries": [
+    "What is Apple's current stock price?",
+    "How has Tesla performed today?",
+    "Show me Microsoft's market cap and P/E ratio",
+    "What's the current value of my AAPL and MSFT holdings?",
+    "How did the market react to Apple's earnings announcement?",
+    "Compare GOOGL and AMZN stock performance today"
+  ],
+  "contexts": [
+    "Apple Inc. reported strong Q1 2024 earnings with revenue of $94.9B, beating analyst expectations of $93.2B. The company saw growth across all segments.",
+    "Tesla announced delivery numbers for Q4, showing a 10% increase year-over-year. The company continues to expand production capacity.",
+    "Microsoft's cloud business Azure grew 30% year-over-year, driving overall revenue growth. The company reported $62B in quarterly revenue."
+  ],
+  "tickers": [
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "AMZN",
+    "TSLA",
+    "NVDA",
+    "META",
+    "JPM",
+    "BAC",
+    "GS"
+  ],
+  "metadata": {
+    "source": "script_examples",
+    "purpose": "demonstration_and_testing",
+    "last_updated": "2024-11-15"
+  }
+}
