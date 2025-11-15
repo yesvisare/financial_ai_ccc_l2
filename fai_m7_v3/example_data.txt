@@ -1,0 +1,138 @@
+Sample SEC Filing Section Text
+================================
+
+Item 1. Business
+----------------
+Microsoft Corporation develops, licenses, and supports software, services, devices, and solutions worldwide.
+The Company operates through three segments: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.
+
+Productivity and Business Processes:
+Our Productivity and Business Processes segment consists of products and services in our portfolio of productivity, communication, and information services, spanning a variety of devices and platforms. This segment primarily comprises Office Commercial (Office 365 subscriptions and Office licensed on-premises), Office Consumer (including Microsoft 365 Consumer subscriptions and Office licensed on-premises), LinkedIn, and Dynamics business solutions.
+
+Intelligent Cloud:
+Our Intelligent Cloud segment consists of our public, private, and hybrid server products and cloud services that can power modern business and developers. This segment primarily comprises Azure and other cloud services, SQL Server, Windows Server, Visual Studio, System Center, and GitHub.
+
+More Personal Computing:
+Our More Personal Computing segment consists of products and services that put customers at the center of the experience with our technology. This segment primarily comprises Windows (including Windows OEM licensing and other non-volume licensing of the Windows operating system and Windows Commercial comprising volume licensing of the Windows operating system, Microsoft Cloud, and other cloud services), Devices (including Surface and PC accessories), Gaming (including Xbox hardware and Xbox content and services), and Search advertising.
+
+Item 1A. Risk Factors
+---------------------
+We face intense competition across all markets for our products and services.
+Technology industry changes require substantial investments in new products and services.
+Our business depends on our ability to attract and retain talented employees.
+Cyberattacks and security vulnerabilities could lead to reduced revenue, increased costs, liability claims, or harm to our reputation.
+Government litigation and regulatory activity relating to competition rules may limit how we design and market our products.
+Our global operations subject us to various laws and regulations worldwide, including those relating to privacy, data protection, and taxation.
+
+Cybersecurity Risks:
+Threats to IT security can take a variety of forms. Individuals and groups of hackers, and sophisticated organizations including state-sponsored organizations, continuously undertake attacks that pose threats to our customers and our IT. These actors may use tools, including malware attacks (including ransomware), SQL injection, phishing, social engineering, credential stuffing, and DDoS attacks to compromise IT security. Cyber threats are constantly evolving, thereby increasing the difficulty of detecting and successfully defending against them.
+
+Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations
+---------------------------------------------------------------------------------------------
+Revenue increased $12.3 billion or 7% driven by growth across all segments.
+Operating income increased $8.5 billion or 10% driven by revenue growth and gross margin expansion, offset in part by investments in engineering, sales, and marketing.
+
+Revenue:
+Fiscal year 2023 compared with fiscal year 2022
+
+Revenue increased 7% driven by growth across all our segments.
+
+- Productivity and Business Processes revenue increased 11% driven by Office 365 Commercial and LinkedIn.
+- Intelligent Cloud revenue increased 19% driven by Azure and other cloud services.
+- More Personal Computing revenue decreased 2% primarily due to decline in Windows OEM and Search advertising, offset in part by growth in Gaming.
+
+Operating Expenses:
+Cost of revenue increased $3.2 billion or 5%.
+Research and development expenses increased $3.9 billion or 16%.
+Sales and marketing expenses increased $2.4 billion or 12%.
+General and administrative expenses increased $1.0 billion or 18%.
+
+Other Income and Expenses:
+Interest and dividends income increased due to higher yields on our fixed-income portfolio.
+Interest expense decreased due to debt maturities, offset in part by higher interest rates.
+Net recognized gains on investments were primarily due to gains on equity securities, offset in part by losses on debt securities.
+
+Item 8. Financial Statements and Supplementary Data
+---------------------------------------------------
+
+CONSOLIDATED BALANCE SHEET
+(In millions, except par value)
+As of June 30, 2023 and 2022
+
+                                                    2023            2022
+ASSETS
+Current assets:
+  Cash and cash equivalents                    $ 34,704      $ 13,931
+  Short-term investments                        76,558        90,826
+  Accounts receivable, net                      48,688        44,261
+  Inventories                                    2,500         3,742
+  Other current assets                          21,807        16,924
+    Total current assets                       184,257       169,684
+
+Property and equipment, net                     95,641        74,398
+Operating lease right-of-use assets             14,346        13,148
+Equity investments                              9,879         6,891
+Goodwill                                        67,886        67,524
+Intangible assets, net                         9,366         11,298
+Other long-term assets                         30,601        21,897
+    Total assets                              $411,976      $364,840
+
+LIABILITIES AND STOCKHOLDERS' EQUITY
+Current liabilities:
+  Accounts payable                            $ 18,095      $ 19,000
+  Short-term debt                                        -          -
+  Current portion of long-term debt             2,749         2,749
+  Accrued compensation                         11,009        10,661
+  Short-term income taxes                       4,152         4,067
+  Short-term unearned revenue                  50,901        45,538
+  Other current liabilities                     8,176         6,642
+    Total current liabilities                  95,082        88,657
+
+Long-term debt                                  41,990        47,032
+Long-term income taxes                         25,560        26,069
+Long-term unearned revenue                      2,912         2,870
+Deferred income taxes                             467           230
+Operating lease liabilities                    12,728        11,489
+Other long-term liabilities                    27,014        21,951
+    Total liabilities                         205,753       198,298
+
+Stockholders' equity:
+  Common stock and paid-in capital             86,939        80,552
+  Retained earnings                           118,848        84,281
+  Accumulated other comprehensive income (loss)   436         1,709
+    Total stockholders' equity                206,223       166,542
+    Total liabilities and stockholders' equity $411,976     $364,840
+
+
+CONSOLIDATED STATEMENTS OF INCOME
+(In millions, except per share amounts)
+Year ended June 30, 2023, 2022, and 2021
+
+                                        2023          2022          2021
+Revenue                             $211,915      $198,270      $168,088
+Cost of revenue                       65,863        62,650        52,232
+  Gross profit                       146,052       135,620       115,856
+
+Operating expenses:
+  Research and development            27,195        24,512        20,716
+  Sales and marketing                 22,759        21,825        20,117
+  General and administrative           7,575         5,900         5,107
+    Total operating expenses          57,529        52,237        45,940
+
+Operating income                      88,523        83,383        69,916
+
+Other income (expense):
+  Interest and dividends income        2,994         2,094         2,131
+  Interest expense                   (1,968)       (2,063)       (2,346)
+  Net recognized gains (losses) on investments    (3,514)       (10,866)       1,232
+  Other, net                          (100)          (75)          (10)
+    Total other income (expense)     (2,588)       (10,910)        1,007
+
+Income before income taxes            85,935        72,473        70,923
+Provision for income taxes            13,574          772         9,831
+Net income                          $ 72,361      $ 71,701      $ 61,092
+
+Earnings per share:
+  Basic                             $  9.72       $  9.65       $  8.12
+  Diluted                           $  9.68       $  9.21       $  8.05
+

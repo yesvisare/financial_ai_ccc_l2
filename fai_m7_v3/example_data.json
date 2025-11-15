@@ -1,0 +1,112 @@
+{
+  "queries": [
+    "Download Microsoft 10-K for fiscal year 2023",
+    "Extract Item 8 financial statements from AAPL 10-K",
+    "Parse XBRL data for TSLA balance sheet",
+    "Chunk AMZN 10-Q with metadata tagging",
+    "What was Microsoft's revenue in Q3 2023?",
+    "Compare Apple's assets across FY2022 and FY2023",
+    "Show me all risk factors for Google",
+    "Extract Management Discussion and Analysis from META 10-K",
+    "What are Tesla's current liabilities?",
+    "Compare revenue recognition policies across FAANG companies"
+  ],
+  "sample_filings": [
+    {
+      "ticker": "MSFT",
+      "filing_type": "10-K",
+      "fiscal_year": 2023,
+      "sections": ["Item 1", "Item 1A", "Item 7", "Item 8"],
+      "description": "Microsoft Corporation Annual Report"
+    },
+    {
+      "ticker": "AAPL",
+      "filing_type": "10-Q",
+      "fiscal_period": "Q3-2023",
+      "sections": ["Part I", "Part II"],
+      "description": "Apple Inc. Quarterly Report"
+    },
+    {
+      "ticker": "GOOGL",
+      "filing_type": "10-K",
+      "fiscal_year": 2023,
+      "sections": ["Item 1", "Item 1A", "Item 7", "Item 8"],
+      "description": "Alphabet Inc. Annual Report"
+    },
+    {
+      "ticker": "AMZN",
+      "filing_type": "10-K",
+      "fiscal_year": 2023,
+      "sections": ["Item 1", "Item 1A", "Item 7", "Item 8"],
+      "description": "Amazon.com Inc. Annual Report"
+    },
+    {
+      "ticker": "TSLA",
+      "filing_type": "10-K",
+      "fiscal_year": 2023,
+      "sections": ["Item 1", "Item 1A", "Item 7", "Item 8"],
+      "description": "Tesla Inc. Annual Report"
+    }
+  ],
+  "xbrl_tags": [
+    "us-gaap:Assets",
+    "us-gaap:Liabilities",
+    "us-gaap:StockholdersEquity",
+    "us-gaap:Revenues",
+    "us-gaap:NetIncomeLoss",
+    "us-gaap:OperatingIncomeLoss",
+    "us-gaap:CashAndCashEquivalents",
+    "us-gaap:AccountsReceivableNet",
+    "us-gaap:PropertyPlantAndEquipmentNet",
+    "us-gaap:GoodwillAndIntangibleAssetsNet",
+    "us-gaap:CurrentAssets",
+    "us-gaap:CurrentLiabilities",
+    "us-gaap:LongTermDebt",
+    "us-gaap:RetainedEarnings",
+    "us-gaap:CostOfRevenue",
+    "us-gaap:GrossProfit",
+    "us-gaap:OperatingExpenses",
+    "us-gaap:IncomeTaxExpense",
+    "us-gaap:EarningsPerShareBasic",
+    "us-gaap:EarningsPerShareDiluted"
+  ],
+  "sections": {
+    "10-K": [
+      {"name": "Item 1", "title": "Business", "description": "Description of business operations"},
+      {"name": "Item 1A", "title": "Risk Factors", "description": "Material risks to the business"},
+      {"name": "Item 1B", "title": "Unresolved Staff Comments", "description": "SEC staff comments"},
+      {"name": "Item 2", "title": "Properties", "description": "Real estate and facilities"},
+      {"name": "Item 3", "title": "Legal Proceedings", "description": "Litigation and legal matters"},
+      {"name": "Item 4", "title": "Mine Safety Disclosures", "description": "Mining safety (if applicable)"},
+      {"name": "Item 5", "title": "Market for Stock", "description": "Stock price and dividends"},
+      {"name": "Item 6", "title": "Selected Financial Data", "description": "5-year financial summary"},
+      {"name": "Item 7", "title": "MD&A", "description": "Management's Discussion and Analysis"},
+      {"name": "Item 7A", "title": "Market Risk", "description": "Quantitative and qualitative disclosures"},
+      {"name": "Item 8", "title": "Financial Statements", "description": "Audited financial statements"},
+      {"name": "Item 9", "title": "Accounting Disagreements", "description": "Changes and disagreements"},
+      {"name": "Item 9A", "title": "Controls and Procedures", "description": "Internal controls"},
+      {"name": "Item 9B", "title": "Other Information", "description": "Additional disclosures"},
+      {"name": "Item 10", "title": "Directors and Officers", "description": "Management information"},
+      {"name": "Item 11", "title": "Executive Compensation", "description": "Compensation details"},
+      {"name": "Item 12", "title": "Security Ownership", "description": "Stock ownership"},
+      {"name": "Item 13", "title": "Related Transactions", "description": "Related party transactions"},
+      {"name": "Item 14", "title": "Accountant Fees", "description": "Audit fees"}
+    ],
+    "10-Q": [
+      {"name": "Part I - Item 1", "title": "Financial Statements", "description": "Unaudited financial statements"},
+      {"name": "Part I - Item 2", "title": "MD&A", "description": "Management discussion"},
+      {"name": "Part I - Item 3", "title": "Market Risk", "description": "Market risk disclosures"},
+      {"name": "Part I - Item 4", "title": "Controls", "description": "Internal controls"},
+      {"name": "Part II - Item 1", "title": "Legal Proceedings", "description": "Litigation"},
+      {"name": "Part II - Item 1A", "title": "Risk Factors", "description": "Material risks"},
+      {"name": "Part II - Item 2", "title": "Stock Repurchases", "description": "Share buybacks"},
+      {"name": "Part II - Item 6", "title": "Exhibits", "description": "Filed exhibits"}
+    ]
+  },
+  "metadata": {
+    "source": "SEC EDGAR API",
+    "purpose": "demonstration",
+    "compliance": "SOX Section 404",
+    "created": "2024-11-15"
+  }
+}
