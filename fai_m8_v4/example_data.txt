@@ -1,0 +1,43 @@
+Sample Fiscal Period Queries (One per line):
+
+What was Apple's revenue in Q3 FY2024?
+Microsoft Q2 FY2024 earnings
+Walmart Q3 FY2024 same-store sales growth
+Amazon Q4 FY2023 operating income
+Google Q1 FY2024 advertising revenue
+Tesla Q2 FY2024 production numbers
+Meta Q3 FY2023 user growth metrics
+Netflix Q4 FY2023 subscriber additions
+Nvidia Q1 FY2024 datacenter revenue
+Intel Q2 FY2024 manufacturing costs
+
+Point-in-Time Queries:
+
+What was Apple's revenue as of March 15, 2023?
+Microsoft's guidance as of December 31, 2022
+Tesla's production numbers as of June 30, 2023
+Amazon's fulfillment costs as of September 30, 2022
+Google's search revenue as of May 15, 2023
+
+Cross-Company Comparisons (Requires Fiscal Period Normalization):
+
+Compare Apple Q3 to Microsoft Q3 revenue growth
+Walmart vs Target Q2 same-store sales
+Amazon vs Google Q4 operating margins
+Tesla vs Ford Q1 production efficiency
+Meta vs Snap Q3 advertising revenue per user
+
+Forward-Looking Statement Examples:
+
+Apple Q1 FY2024 revenue guidance for Q2
+Microsoft Q3 FY2023 cloud growth projections
+Walmart Q4 FY2023 holiday season forecast
+Tesla Q2 FY2024 production ramp timeline
+Google Q1 FY2024 AI investment plans
+
+Temporal Consistency Validation Scenarios:
+
+Valid: All documents from Apple Q3 FY2024 (April-June 2024)
+Invalid: Mixing Apple Q3 FY2024 with Q4 FY2024 documents
+Warning: Documents spanning 6+ months (potential staleness)
+Error: Comparing Apple Q3 to Microsoft Q3 without calendar alignment

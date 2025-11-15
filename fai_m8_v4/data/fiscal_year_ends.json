@@ -1,0 +1,175 @@
+{
+  "description": "Fiscal year end dates for major US companies",
+  "version": "1.0.0",
+  "last_updated": "2024-01-15",
+  "source": "SEC 10-K filings and company investor relations",
+  "companies": {
+    "AAPL": {
+      "company_name": "Apple Inc.",
+      "fiscal_year_end": "09-30",
+      "source": "SEC 10-K",
+      "notes": "Last Saturday of September (approximated to Sept 30)"
+    },
+    "MSFT": {
+      "company_name": "Microsoft Corporation",
+      "fiscal_year_end": "06-30",
+      "source": "SEC 10-K",
+      "notes": "June 30"
+    },
+    "WMT": {
+      "company_name": "Walmart Inc.",
+      "fiscal_year_end": "01-31",
+      "source": "SEC 10-K",
+      "notes": "January 31"
+    },
+    "AMZN": {
+      "company_name": "Amazon.com Inc.",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "GOOGL": {
+      "company_name": "Alphabet Inc.",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "TSLA": {
+      "company_name": "Tesla Inc.",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "META": {
+      "company_name": "Meta Platforms Inc.",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "NFLX": {
+      "company_name": "Netflix Inc.",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "NVDA": {
+      "company_name": "Nvidia Corporation",
+      "fiscal_year_end": "01-31",
+      "source": "SEC 10-K",
+      "notes": "Last Sunday in January (approximated to Jan 31)"
+    },
+    "INTC": {
+      "company_name": "Intel Corporation",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "CSCO": {
+      "company_name": "Cisco Systems Inc.",
+      "fiscal_year_end": "07-31",
+      "source": "SEC 10-K",
+      "notes": "Last Saturday of July (approximated to July 31)"
+    },
+    "ORCL": {
+      "company_name": "Oracle Corporation",
+      "fiscal_year_end": "05-31",
+      "source": "SEC 10-K",
+      "notes": "May 31"
+    },
+    "CRM": {
+      "company_name": "Salesforce Inc.",
+      "fiscal_year_end": "01-31",
+      "source": "SEC 10-K",
+      "notes": "January 31"
+    },
+    "ADBE": {
+      "company_name": "Adobe Inc.",
+      "fiscal_year_end": "11-30",
+      "source": "SEC 10-K",
+      "notes": "Friday nearest to November 30"
+    },
+    "PYPL": {
+      "company_name": "PayPal Holdings Inc.",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "TGT": {
+      "company_name": "Target Corporation",
+      "fiscal_year_end": "01-31",
+      "source": "SEC 10-K",
+      "notes": "Saturday nearest to January 31"
+    },
+    "HD": {
+      "company_name": "Home Depot Inc.",
+      "fiscal_year_end": "01-31",
+      "source": "SEC 10-K",
+      "notes": "Sunday nearest to January 31"
+    },
+    "COST": {
+      "company_name": "Costco Wholesale Corporation",
+      "fiscal_year_end": "08-31",
+      "source": "SEC 10-K",
+      "notes": "Sunday nearest to August 31"
+    },
+    "NKE": {
+      "company_name": "Nike Inc.",
+      "fiscal_year_end": "05-31",
+      "source": "SEC 10-K",
+      "notes": "May 31"
+    },
+    "DIS": {
+      "company_name": "Walt Disney Company",
+      "fiscal_year_end": "09-30",
+      "source": "SEC 10-K",
+      "notes": "Saturday nearest to September 30"
+    },
+    "BA": {
+      "company_name": "Boeing Company",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "CAT": {
+      "company_name": "Caterpillar Inc.",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "IBM": {
+      "company_name": "International Business Machines Corporation",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "GS": {
+      "company_name": "Goldman Sachs Group Inc.",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    },
+    "JPM": {
+      "company_name": "JPMorgan Chase & Co.",
+      "fiscal_year_end": "12-31",
+      "source": "SEC 10-K",
+      "notes": "Calendar year"
+    }
+  },
+  "fiscal_year_end_distribution": {
+    "12-31": ["AMZN", "GOOGL", "TSLA", "META", "NFLX", "INTC", "PYPL", "BA", "CAT", "IBM", "GS", "JPM"],
+    "01-31": ["WMT", "NVDA", "CRM", "TGT", "HD"],
+    "09-30": ["AAPL", "DIS"],
+    "06-30": ["MSFT"],
+    "05-31": ["ORCL", "NKE"],
+    "07-31": ["CSCO"],
+    "08-31": ["COST"],
+    "11-30": ["ADBE"]
+  },
+  "notes": [
+    "Fiscal year ends are based on latest SEC 10-K filings as of 2024-01-15",
+    "Companies with 'Saturday nearest' or 'Sunday nearest' are approximated to month-end",
+    "Update this file annually to reflect any fiscal year changes",
+    "Some companies occasionally change fiscal year ends - check SEC filings for updates",
+    "For real-time data, query SEC Edgar API: https://www.sec.gov/cgi-bin/browse-edgar"
+  ]
+}

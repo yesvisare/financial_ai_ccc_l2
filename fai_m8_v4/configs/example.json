@@ -1,0 +1,39 @@
+{
+  "description": "Example configuration for temporal financial information handling",
+  "settings": {
+    "timeout": 30,
+    "max_retries": 3,
+    "strict_validation": true,
+    "cache_fiscal_year_ends": true,
+    "confidence_decay_threshold_days": 180
+  },
+  "vector_db": {
+    "provider": "pinecone",
+    "index_name": "financial-documents",
+    "top_k_default": 5,
+    "metadata_fields": [
+      "ticker",
+      "filing_date",
+      "report_date",
+      "fiscal_period",
+      "document_type",
+      "is_forward_looking"
+    ]
+  },
+  "fiscal_calendar": {
+    "data_source": "data/fiscal_year_ends.json",
+    "update_frequency": "annually",
+    "fallback_to_calendar_year": false
+  },
+  "temporal_validation": {
+    "strict_mode": true,
+    "max_date_range_days": 180,
+    "allow_cross_company": false,
+    "flag_forward_looking_age_days": 180
+  },
+  "api_settings": {
+    "include_disclaimers": true,
+    "log_audit_trail": true,
+    "rate_limit_per_minute": 60
+  }
+}

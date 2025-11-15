@@ -1,0 +1,101 @@
+{
+  "description": "Sample queries for temporal financial information handling",
+  "fiscal_period_queries": [
+    {
+      "query": "What was Apple's revenue in Q3 FY2024?",
+      "ticker": "AAPL",
+      "fiscal_year": 2024,
+      "quarter": "Q3",
+      "expected_calendar_period": "2024-04-01 to 2024-06-30"
+    },
+    {
+      "query": "Microsoft Q2 FY2024 earnings",
+      "ticker": "MSFT",
+      "fiscal_year": 2024,
+      "quarter": "Q2",
+      "expected_calendar_period": "2023-10-01 to 2023-12-31"
+    },
+    {
+      "query": "Walmart Q3 FY2024 same-store sales",
+      "ticker": "WMT",
+      "fiscal_year": 2024,
+      "quarter": "Q3",
+      "expected_calendar_period": "2023-08-01 to 2023-10-31"
+    },
+    {
+      "query": "Amazon Q4 FY2023 operating income",
+      "ticker": "AMZN",
+      "fiscal_year": 2023,
+      "quarter": "Q4",
+      "expected_calendar_period": "2023-10-01 to 2023-12-31"
+    },
+    {
+      "query": "Google Q1 FY2024 advertising revenue",
+      "ticker": "GOOGL",
+      "fiscal_year": 2024,
+      "quarter": "Q1",
+      "expected_calendar_period": "2024-01-01 to 2024-03-31"
+    }
+  ],
+  "point_in_time_queries": [
+    {
+      "query": "What was Apple's revenue as of March 15, 2023?",
+      "ticker": "AAPL",
+      "as_of_date": "2023-03-15",
+      "description": "Retrieve documents filed before March 15, 2023"
+    },
+    {
+      "query": "Microsoft's guidance as of December 31, 2022",
+      "ticker": "MSFT",
+      "as_of_date": "2022-12-31",
+      "description": "Point-in-time query for year-end state"
+    },
+    {
+      "query": "Tesla's production numbers as of June 30, 2023",
+      "ticker": "TSLA",
+      "as_of_date": "2023-06-30",
+      "description": "Historical data state reconstruction"
+    }
+  ],
+  "temporal_consistency_examples": [
+    {
+      "scenario": "Valid - Same fiscal period",
+      "documents": [
+        {"ticker": "AAPL", "filing_date": "2024-04-15", "fiscal_period": "Q3 FY2024"},
+        {"ticker": "AAPL", "filing_date": "2024-05-20", "fiscal_period": "Q3 FY2024"}
+      ],
+      "expected_status": "valid"
+    },
+    {
+      "scenario": "Invalid - Mixed fiscal periods",
+      "documents": [
+        {"ticker": "AAPL", "filing_date": "2024-04-15", "fiscal_period": "Q3 FY2024"},
+        {"ticker": "AAPL", "filing_date": "2024-07-15", "fiscal_period": "Q4 FY2024"}
+      ],
+      "expected_status": "invalid",
+      "expected_issue": "mixed_fiscal_periods"
+    },
+    {
+      "scenario": "Warning - Large date range",
+      "documents": [
+        {"ticker": "AAPL", "filing_date": "2024-01-15", "fiscal_period": "Q1 FY2024"},
+        {"ticker": "AAPL", "filing_date": "2024-09-15", "fiscal_period": "Q4 FY2024"}
+      ],
+      "expected_status": "valid",
+      "expected_warning": "large_date_range"
+    }
+  ],
+  "companies": [
+    {"ticker": "AAPL", "name": "Apple Inc.", "fiscal_year_end": "09-30"},
+    {"ticker": "MSFT", "name": "Microsoft Corporation", "fiscal_year_end": "06-30"},
+    {"ticker": "WMT", "name": "Walmart Inc.", "fiscal_year_end": "01-31"},
+    {"ticker": "AMZN", "name": "Amazon.com Inc.", "fiscal_year_end": "12-31"},
+    {"ticker": "GOOGL", "name": "Alphabet Inc.", "fiscal_year_end": "12-31"},
+    {"ticker": "TSLA", "name": "Tesla Inc.", "fiscal_year_end": "12-31"}
+  ],
+  "metadata": {
+    "source": "L3 M8.4 Augmented Script",
+    "purpose": "demonstration and testing",
+    "version": "1.0.0"
+  }
+}
