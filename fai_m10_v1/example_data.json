@@ -1,0 +1,220 @@
+{
+  "deployment_configs": [
+    {
+      "deployment_type": "small_investment_advisory",
+      "description": "Small investment advisory firm with 20 advisors and 50 client portfolios",
+      "vpc_config": {
+        "cidr_block": "10.0.0.0/16",
+        "public_subnet": "10.0.1.0/24",
+        "private_subnets": ["10.0.10.0/24", "10.0.11.0/24"]
+      },
+      "users": 20,
+      "documents": 5000,
+      "queries_per_day": 1000,
+      "monthly_cost_usd": 305,
+      "monthly_cost_inr": 25000,
+      "annual_compliance_cost_usd": 15000,
+      "annual_compliance_cost_inr": 1250000,
+      "total_monthly_cost_usd": 1560,
+      "total_monthly_cost_inr": 129000,
+      "cost_per_user_usd": 78,
+      "cost_per_user_inr": 6450,
+      "infrastructure_breakdown": {
+        "ecs_tasks": 10000,
+        "vpc_nat_gateway": 2700,
+        "secrets_manager": 350,
+        "cloudwatch_s3": 4200,
+        "kms": 85,
+        "alb": 2500,
+        "pinecone": 4200
+      }
+    },
+    {
+      "deployment_type": "medium_investment_bank",
+      "description": "Medium investment bank with 100 analysts and 200 deal flows",
+      "vpc_config": {
+        "cidr_block": "10.0.0.0/16",
+        "public_subnet": "10.0.1.0/24",
+        "private_subnets": ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
+      },
+      "users": 100,
+      "documents": 50000,
+      "queries_per_day": 10000,
+      "monthly_cost_usd": 1530,
+      "monthly_cost_inr": 125000,
+      "annual_compliance_cost_usd": 50000,
+      "annual_compliance_cost_inr": 4150000,
+      "total_monthly_cost_usd": 5750,
+      "total_monthly_cost_inr": 470000,
+      "cost_per_user_usd": 58,
+      "cost_per_user_inr": 4700,
+      "infrastructure_breakdown": {
+        "ecs_tasks": 25000,
+        "vpc_nat_gateway": 2700,
+        "secrets_manager": 850,
+        "cloudwatch_s3": 16700,
+        "kms": 85,
+        "alb_cloudfront": 8300,
+        "pinecone": 41700,
+        "rds_postgresql": 25000
+      }
+    },
+    {
+      "deployment_type": "large_hedge_fund",
+      "description": "Large hedge fund with 500 traders and 500 investment strategies",
+      "vpc_config": {
+        "cidr_block": "10.0.0.0/16",
+        "public_subnet": "10.0.1.0/24",
+        "private_subnets": ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
+      },
+      "users": 500,
+      "documents": 200000,
+      "queries_per_day": 100000,
+      "monthly_cost_usd": 6125,
+      "monthly_cost_inr": 500000,
+      "annual_compliance_cost_usd": 152000,
+      "annual_compliance_cost_inr": 12500000,
+      "total_monthly_cost_usd": 18875,
+      "total_monthly_cost_inr": 1540000,
+      "cost_per_user_usd": 38,
+      "cost_per_user_inr": 3080,
+      "infrastructure_breakdown": {
+        "ecs_tasks": 83000,
+        "vpc_nat_gateway_multi_region": 8300,
+        "secrets_manager": 2100,
+        "cloudwatch_s3": 66700,
+        "kms": 170,
+        "alb_cloudfront": 25000,
+        "pinecone": 208000,
+        "rds_postgresql_multi_az": 83000,
+        "redis_elasticache": 20800
+      }
+    }
+  ],
+  "security_requirements": {
+    "soc2_type2": {
+      "required": true,
+      "annual_audit_cost_usd": 15000,
+      "description": "Independent audit of security controls for service organizations"
+    },
+    "sox_section_404": {
+      "required": true,
+      "requirement": "7-year audit log retention with immutable storage",
+      "description": "Internal controls over financial reporting for public companies"
+    },
+    "glba_title_v": {
+      "required": true,
+      "requirement": "Encryption at rest and in transit, access controls, privacy notices",
+      "description": "Customer financial data protection for financial institutions"
+    },
+    "pci_dss": {
+      "required": false,
+      "note": "Only required if processing credit card data. Most financial RAG systems do NOT need PCI DSS."
+    },
+    "encryption_at_rest": true,
+    "encryption_in_transit": true,
+    "audit_log_retention_years": 7,
+    "mfa_required": true,
+    "immutable_storage": true
+  },
+  "compliance_frameworks": [
+    {
+      "name": "SOC 2 Type II",
+      "applicability": "All financial RAG deployments providing services to clients",
+      "trust_service_criteria": ["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"]
+    },
+    {
+      "name": "SOX Section 404",
+      "applicability": "Public companies using RAG for financial reporting",
+      "requirements": ["7-year retention", "Immutable storage", "Audit trail", "Change management"]
+    },
+    {
+      "name": "GLBA Title V",
+      "applicability": "Financial institutions handling customer data",
+      "requirements": ["Encryption", "Access controls", "Privacy notices", "Opt-out mechanism"]
+    },
+    {
+      "name": "GDPR",
+      "applicability": "EU customers only",
+      "requirements": ["Right to erasure", "Data portability", "Consent management"]
+    },
+    {
+      "name": "PCI DSS",
+      "applicability": "Only if processing credit card data (rare for RAG systems)",
+      "requirements": ["Cardholder data encryption", "Quarterly vulnerability scans"]
+    }
+  ],
+  "common_failures": [
+    {
+      "failure_id": 1,
+      "name": "Private subnet cannot reach internet",
+      "symptom": "RAG API cannot connect to OpenAI API - Connection timeout",
+      "root_cause": "Private subnet route table not pointing to NAT Gateway",
+      "debug_command": "aws ec2 describe-route-tables --filters Name=association.subnet-id,Values=<private-subnet-id>",
+      "fix": "Ensure route table has 0.0.0.0/0 -> NAT Gateway (not Internet Gateway)"
+    },
+    {
+      "failure_id": 2,
+      "name": "IAM role missing permissions",
+      "symptom": "AccessDeniedException when retrieving secrets from Secrets Manager",
+      "root_cause": "IAM role lacks secretsmanager:GetSecretValue permission",
+      "debug_command": "aws iam get-policy-version --policy-arn <policy-arn> --version-id <version-id>",
+      "fix": "Add secretsmanager:GetSecretValue to IAM policy Resource ARN"
+    },
+    {
+      "failure_id": 3,
+      "name": "Secret not found or wrong region",
+      "symptom": "ResourceNotFoundException when retrieving secret",
+      "root_cause": "Secret deleted or application looking in wrong AWS region",
+      "debug_command": "aws secretsmanager describe-secret --secret-id <name> --region <region>",
+      "fix": "Always specify region explicitly in code, use Terraform to manage secrets"
+    },
+    {
+      "failure_id": 4,
+      "name": "Security groups block internal traffic",
+      "symptom": "RAG API can reach OpenAI but cannot reach vector database",
+      "root_cause": "Security group on vector DB doesn't allow inbound from RAG API security group",
+      "debug_command": "aws ec2 describe-security-groups --group-ids <vector-db-sg-id>",
+      "fix": "Ensure vector DB security group allows inbound from RAG API security group on port 443"
+    },
+    {
+      "failure_id": 5,
+      "name": "Audit logs not archived to S3",
+      "symptom": "90 days later, old CloudWatch logs disappear - SOX audit fails",
+      "root_cause": "S3 archival not configured via Kinesis Firehose",
+      "debug_command": "aws s3 ls s3://financial-rag-audit-logs-<account-id>/year=2024/",
+      "fix": "Configure CloudWatch Logs subscription filter to export to Kinesis Firehose -> S3"
+    },
+    {
+      "failure_id": 6,
+      "name": "Secrets rotation breaks application",
+      "symptom": "PostgreSQL authentication fails 30 days after deployment",
+      "root_cause": "Secrets Manager rotated password, application cached old password",
+      "debug_command": "Check application connection pool settings and credential refresh logic",
+      "fix": "Use connection pooling with pool_pre_ping=True, refresh credentials every 12 hours"
+    }
+  ],
+  "roi_examples": [
+    {
+      "organization_type": "Investment Advisory Firm",
+      "monthly_cost_inr": 129000,
+      "annual_cost_inr": 1548000,
+      "time_savings_per_advisor_hours": 20,
+      "hourly_rate_inr": 4200,
+      "monthly_benefit_inr": 1680000,
+      "roi_multiplier": 12,
+      "roi_description": "Advisors answer client queries 50% faster"
+    },
+    {
+      "organization_type": "Investment Bank",
+      "monthly_cost_inr": 470000,
+      "annual_cost_inr": 5640000,
+      "deals_per_year": 100,
+      "hours_saved_per_deal": 40,
+      "hourly_rate_inr": 8300,
+      "annual_benefit_inr": 33200000,
+      "roi_multiplier": 6,
+      "roi_description": "Analysts complete due diligence 30% faster"
+    }
+  ]
+}

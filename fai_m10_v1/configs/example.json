@@ -1,0 +1,111 @@
+{
+  "deployment": {
+    "environment": "production",
+    "region": "us-east-1",
+    "multi_az": true,
+    "availability_zones": ["us-east-1a", "us-east-1b"],
+    "deployment_type": "secure_financial_rag"
+  },
+  "security": {
+    "encryption_enabled": true,
+    "encryption_algorithm": "AES-256-GCM",
+    "tls_version": "1.3",
+    "fips_140_2_compliant": true,
+    "audit_logging_enabled": true,
+    "secrets_rotation_days": 90,
+    "mfa_required": true,
+    "immutable_storage": true
+  },
+  "compliance": {
+    "frameworks": ["SOC2", "SOX", "GLBA"],
+    "soc2_type": "Type II",
+    "audit_log_retention_years": 7,
+    "penetration_test_frequency_months": 12,
+    "vulnerability_scan_frequency_months": 3,
+    "compliance_review_frequency_months": 6
+  },
+  "network": {
+    "vpc_cidr": "10.0.0.0/16",
+    "public_subnet_cidr": "10.0.1.0/24",
+    "private_subnet_cidrs": ["10.0.10.0/24", "10.0.11.0/24"],
+    "enable_nat_gateway": true,
+    "enable_vpc_endpoints": true,
+    "vpc_flow_logs_enabled": true
+  },
+  "services": {
+    "openai": {
+      "enabled": true,
+      "model": "gpt-4",
+      "embedding_model": "text-embedding-3-large",
+      "max_tokens": 4096,
+      "temperature": 0.1
+    },
+    "pinecone": {
+      "enabled": true,
+      "environment": "us-east-1-aws",
+      "index_name": "financial-rag-production",
+      "dimension": 3072,
+      "metric": "cosine"
+    },
+    "secrets_manager": {
+      "enabled": true,
+      "auto_rotation": true,
+      "rotation_days": 90
+    },
+    "cloudwatch": {
+      "enabled": true,
+      "log_group": "/financial-rag/production",
+      "retention_days": 2555,
+      "metrics_enabled": true
+    },
+    "cloudtrail": {
+      "enabled": true,
+      "s3_bucket": "financial-rag-cloudtrail",
+      "log_file_validation": true
+    }
+  },
+  "iam": {
+    "least_privilege": true,
+    "rbac_enabled": true,
+    "roles": {
+      "analyst": {
+        "permissions": ["read_documents", "query_rag", "view_portfolio"],
+        "max_session_duration_hours": 12
+      },
+      "admin": {
+        "permissions": ["read_documents", "query_rag", "write_documents", "manage_users", "configure_system"],
+        "max_session_duration_hours": 8,
+        "mfa_required": true
+      },
+      "compliance": {
+        "permissions": ["read_documents", "query_rag", "read_audit_logs", "export_compliance_reports"],
+        "max_session_duration_hours": 24
+      },
+      "viewer": {
+        "permissions": ["read_documents"],
+        "max_session_duration_hours": 24
+      }
+    }
+  },
+  "monitoring": {
+    "enabled": true,
+    "alarms": {
+      "high_error_rate": {
+        "threshold": 5,
+        "period_minutes": 5
+      },
+      "failed_authentication": {
+        "threshold": 10,
+        "period_minutes": 5
+      },
+      "kms_access_denied": {
+        "threshold": 3,
+        "period_minutes": 5
+      },
+      "secrets_retrieval_failure": {
+        "threshold": 5,
+        "period_minutes": 5
+      }
+    }
+  }
+}
