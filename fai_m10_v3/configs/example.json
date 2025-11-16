@@ -1,0 +1,24 @@
+{
+  "queries": [],
+  "settings": {
+    "timeout": 30,
+    "max_retries": 3,
+    "drift_threshold": 0.85,
+    "retraining_batch_size": 50,
+    "regulatory_check_interval_hours": 24,
+    "citation_accuracy_threshold": 95,
+    "audit_retention_days": 2555
+  },
+  "service_config": {
+    "openai": {
+      "model": "text-embedding-3-small",
+      "dimensions": 1536,
+      "max_tokens": 8191
+    },
+    "pinecone": {
+      "metric": "cosine",
+      "namespace_baseline": "baseline",
+      "namespace_current": "current"
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "baseline_concepts": {
+    "Lease Accounting": "ASC 840 requires operating leases to be treated as off-balance sheet arrangements. Lessees recognize rent expense on straight-line basis over lease term. No asset or liability recognition for operating leases.",
+    "Revenue Recognition": "ASC 605 requires revenue to be recognized when earned and realizable. Four criteria: persuasive evidence of arrangement, delivery occurred, price is fixed/determinable, collectibility is reasonably assured.",
+    "Right-of-Use Asset": "Not applicable under ASC 840 operating lease model. Concept introduced in ASC 842.",
+    "Credit Losses": "Incurred loss model for credit impairments. Losses recognized when probable that amount will not be collected. Historical loss experience primary input.",
+    "Lease Liability": "Not recognized for operating leases under ASC 840. Only capital lease obligations on balance sheet.",
+    "Contract Asset": "Not defined under ASC 605. Concept introduced with ASC 606 revenue standard."
+  },
+  "current_concepts_high_drift": {
+    "Lease Accounting": "ASC 842 requires lessees to recognize right-of-use assets and lease liabilities for all leases (including operating leases) on balance sheet. Dual model retained for income statement purposes.",
+    "Revenue Recognition": "ASC 606 establishes five-step model: identify contract, identify performance obligations, determine transaction price, allocate price to obligations, recognize revenue when obligation satisfied.",
+    "Right-of-Use Asset": "Represents lessee's right to use underlying asset during lease term. Measured at initial measurement of lease liability plus initial direct costs, prepayments, less incentives.",
+    "Credit Losses": "CECL (Current Expected Credit Loss) model requires forward-looking estimates. Losses recognized at inception based on lifetime expected losses. Incorporates reasonable/supportable forecasts.",
+    "Lease Liability": "Present value of lease payments not yet paid, discounted using rate implicit in lease or incremental borrowing rate. Recognized for all leases under ASC 842.",
+    "Contract Asset": "Entity's right to consideration in exchange for goods/services transferred to customer. Differs from receivable (unconditional right to payment)."
+  },
+  "current_concepts_low_drift": {
+    "Lease Accounting": "ASC 840 requires operating lease arrangements to be off-balance sheet. Straight-line rent expense recognition over term.",
+    "Credit Losses": "Incurred loss model for credit loss impairments. Recognition when probable collection will not occur."
+  },
+  "queries": [
+    "Detect drift in lease accounting standards between ASC 840 and ASC 842",
+    "Version knowledge base for ASC 842 effective date January 1, 2019",
+    "Monitor FASB updates for revenue recognition guidance",
+    "Retrain embeddings for affected lease accounting documents",
+    "Run regression tests after ASC 842 version update",
+    "Generate audit trail for drift detection events",
+    "Query historical lease transactions from 2018 using ASC 840",
+    "Identify documents affected by CECL model drift",
+    "Validate citation accuracy after knowledge base update",
+    "Check regulatory sources for new ASU announcements"
+  ],
+  "sample_documents": [
+    {
+      "id": "doc_001",
+      "content": "Lease accounting under ASC 842 requires lessees to recognize right-of-use assets and lease liabilities for substantially all leases on the balance sheet. This represents a significant change from ASC 840.",
+      "metadata": {
+        "standard": "ASC 842",
+        "effective_date": "2019-01-01",
+        "topic": "Lease Accounting"
+      }
+    },
+    {
+      "id": "doc_002",
+      "content": "Revenue recognition follows ASC 606 five-step model. Step 1: Identify contract. Step 2: Identify performance obligations. Step 3: Determine transaction price. Step 4: Allocate price. Step 5: Recognize revenue.",
+      "metadata": {
+        "standard": "ASC 606",
+        "effective_date": "2018-01-01",
+        "topic": "Revenue Recognition"
+      }
+    },
+    {
+      "id": "doc_003",
+      "content": "Right-of-use asset represents the lessee's right to use an underlying asset during the lease term. Initial measurement equals lease liability plus initial direct costs and prepaid lease payments, less lease incentives.",
+      "metadata": {
+        "standard": "ASC 842",
+        "effective_date": "2019-01-01",
+        "topic": "Lease Accounting"
+      }
+    },
+    {
+      "id": "doc_004",
+      "content": "CECL (Current Expected Credit Loss) model requires financial institutions to estimate lifetime expected credit losses at inception. This contrasts with the incurred loss model which recognized losses only when probable.",
+      "metadata": {
+        "standard": "ASC 326",
+        "effective_date": "2020-01-01",
+        "topic": "Credit Losses"
+      }
+    },
+    {
+      "id": "doc_005",
+      "content": "Lease liability equals the present value of lease payments not yet paid, discounted using the rate implicit in the lease or the lessee's incremental borrowing rate. Remeasured when lease modifications occur.",
+      "metadata": {
+        "standard": "ASC 842",
+        "effective_date": "2019-01-01",
+        "topic": "Lease Accounting"
+      }
+    },
+    {
+      "id": "doc_006",
+      "content": "Under ASC 840 operating lease model, lessees recognize rent expense on a straight-line basis. No balance sheet recognition of assets or liabilities for operating leases.",
+      "metadata": {
+        "standard": "ASC 840",
+        "effective_until": "2018-12-31",
+        "topic": "Lease Accounting"
+      }
+    },
+    {
+      "id": "doc_007",
+      "content": "Contract asset represents the entity's right to consideration in exchange for goods or services transferred to a customer, before that right becomes unconditional (i.e., before invoice issued).",
+      "metadata": {
+        "standard": "ASC 606",
+        "effective_date": "2018-01-01",
+        "topic": "Revenue Recognition"
+      }
+    }
+  ],
+  "version_metadata": {
+    "ASC_840": {
+      "standard_name": "ASC 840 - Leases (Old)",
+      "effective_from": "2000-01-01",
+      "effective_until": "2018-12-31",
+      "superseded_by": "ASC 842"
+    },
+    "ASC_842": {
+      "standard_name": "ASC 842 - Leases (New)",
+      "effective_from": "2019-01-01",
+      "effective_until": null,
+      "supersedes": "ASC 840"
+    },
+    "ASC_605": {
+      "standard_name": "ASC 605 - Revenue Recognition (Old)",
+      "effective_from": "1990-01-01",
+      "effective_until": "2017-12-31",
+      "superseded_by": "ASC 606"
+    },
+    "ASC_606": {
+      "standard_name": "ASC 606 - Revenue from Contracts with Customers",
+      "effective_from": "2018-01-01",
+      "effective_until": null,
+      "supersedes": "ASC 605"
+    },
+    "ASC_326": {
+      "standard_name": "ASC 326 - CECL (Current Expected Credit Losses)",
+      "effective_from": "2020-01-01",
+      "effective_until": null,
+      "supersedes": "Incurred Loss Model"
+    }
+  },
+  "drift_thresholds": {
+    "high_severity": 0.70,
+    "medium_severity": 0.80,
+    "low_severity": 0.85,
+    "no_drift": 1.00
+  },
+  "regulatory_sources": [
+    {
+      "source": "FASB",
+      "url": "https://www.fasb.org/",
+      "description": "Financial Accounting Standards Board - Primary source for GAAP standards"
+    },
+    {
+      "source": "SEC EDGAR",
+      "url": "https://www.sec.gov/edgar",
+      "description": "Securities and Exchange Commission - Public company filings and guidance"
+    },
+    {
+      "source": "AICPA",
+      "url": "https://www.aicpa.org/",
+      "description": "American Institute of CPAs - Professional guidance and practice aids"
+    }
+  ],
+  "metadata": {
+    "source": "L3_M10.3_script_examples",
+    "purpose": "demonstration_and_testing",
+    "module": "M10.3 - Managing Financial Knowledge Base Drift",
+    "services": ["OpenAI", "Pinecone"],
+    "cost_tier": "medium_deployment_50k_docs"
+  }
+}

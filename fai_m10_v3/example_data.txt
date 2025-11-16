@@ -1,0 +1,162 @@
+# Sample Financial Concepts for Drift Detection
+# L3_M10.3: Managing Financial Knowledge Base Drift
+
+## ASC 840 - Operating Lease Model (Effective until 2018-12-31)
+
+Lease Accounting: Under ASC 840, operating leases are treated as off-balance sheet arrangements. Lessees recognize rent expense on a straight-line basis over the lease term. No asset or liability recognition for operating leases on the balance sheet.
+
+Lease Liability: Not recognized for operating leases under ASC 840. Only capital lease obligations appear on the balance sheet as liabilities.
+
+Right-of-Use Asset: Not applicable under ASC 840 operating lease model. This concept was introduced with ASC 842.
+
+## ASC 842 - New Lease Accounting (Effective 2019-01-01)
+
+Lease Accounting: ASC 842 requires lessees to recognize right-of-use assets and lease liabilities for all leases (including operating leases) on the balance sheet. A dual model is retained for income statement purposes, distinguishing between finance and operating leases.
+
+Right-of-Use Asset: Represents the lessee's right to use the underlying asset during the lease term. Measured at initial measurement of lease liability, plus initial direct costs, prepaid lease payments, less lease incentives received.
+
+Lease Liability: Present value of lease payments not yet paid, discounted using the rate implicit in the lease (if readily determinable) or the lessee's incremental borrowing rate. Recognized for all leases under ASC 842.
+
+## ASC 605 - Revenue Recognition (Old Standard, Effective until 2017-12-31)
+
+Revenue Recognition: ASC 605 requires revenue to be recognized when it is earned and realizable. Four criteria must be met: (1) persuasive evidence of an arrangement exists, (2) delivery has occurred or services rendered, (3) price is fixed or determinable, (4) collectibility is reasonably assured.
+
+## ASC 606 - Revenue from Contracts (Effective 2018-01-01)
+
+Revenue Recognition: ASC 606 establishes a five-step model for revenue recognition:
+1. Identify the contract with a customer
+2. Identify the performance obligations in the contract
+3. Determine the transaction price
+4. Allocate the transaction price to performance obligations
+5. Recognize revenue when (or as) each performance obligation is satisfied
+
+Contract Asset: Entity's right to consideration in exchange for goods or services transferred to a customer. Differs from a receivable, which is an unconditional right to payment.
+
+## ASC 326 - CECL Model (Effective 2020-01-01)
+
+Credit Losses (Old - Incurred Loss Model): Incurred loss model for credit impairments. Losses recognized when it is probable that an amount will not be collected. Historical loss experience is the primary input.
+
+Credit Losses (New - CECL Model): Current Expected Credit Loss (CECL) model requires forward-looking estimates of credit losses. Losses recognized at inception based on lifetime expected credit losses. Incorporates reasonable and supportable forecasts of future economic conditions.
+
+## Sample Query Scenarios
+
+1. Historical Query (2018): "What is the accounting treatment for operating leases?"
+   → Should use ASC 840 knowledge base version
+   → Answer: Operating leases are off-balance sheet, rent expense recognized straight-line
+
+2. Current Query (2023): "What is the accounting treatment for operating leases?"
+   → Should use ASC 842 knowledge base version
+   → Answer: All leases on-balance sheet with right-of-use asset and lease liability
+
+3. Transition Query (2019): "How did lease accounting change in 2019?"
+   → Should reference both ASC 840 and ASC 842 versions
+   → Answer: ASC 842 replaced ASC 840, requiring on-balance sheet treatment
+
+## Drift Detection Examples
+
+HIGH SEVERITY DRIFT (Similarity < 0.70):
+- "Operating leases off-balance sheet" (ASC 840) vs. "All leases on-balance sheet" (ASC 842)
+- "Revenue when earned" (ASC 605) vs. "Five-step model" (ASC 606)
+- "Incurred loss model" vs. "Current expected credit loss model"
+
+MEDIUM SEVERITY DRIFT (0.70-0.80):
+- Minor definitional changes in same standard
+- Clarifications that affect interpretation
+
+LOW SEVERITY DRIFT (0.80-0.85):
+- Editorial changes (typo fixes)
+- Wording improvements without meaning changes
+
+NO DRIFT (>= 0.85):
+- Identical or nearly identical concepts
+- Same semantic meaning despite minor phrasing differences
+
+## Regulatory Update Sources
+
+FASB (Financial Accounting Standards Board):
+- Primary source for GAAP standards
+- Issues Accounting Standards Updates (ASUs)
+- Monitor: https://www.fasb.org/
+
+SEC (Securities and Exchange Commission):
+- Regulatory guidance for public companies
+- EDGAR database for filings
+- Monitor: https://www.sec.gov/
+
+AICPA (American Institute of CPAs):
+- Professional guidance and practice aids
+- Audit and accounting guides
+- Monitor: https://www.aicpa.org/
+
+## Selective Retraining Example
+
+Scenario: ASC 842 replaces ASC 840 (High severity drift detected)
+
+Affected Concepts: ["Lease Accounting", "Right-of-Use Asset", "Lease Liability"]
+
+Document Corpus Analysis:
+- Total documents: 50,000
+- Documents mentioning "lease": 1,500 (3%)
+- Documents requiring re-embedding: 1,500
+
+Cost Calculation:
+- Full corpus re-embedding: 50,000 docs × $0.0002 = $10
+- Selective retraining: 1,500 docs × $0.0002 = $0.30
+- Savings: $9.70 (97% reduction)
+
+## Version Control Timeline
+
+2000-01-01: ASC 840 effective (Operating lease model)
+2018-01-01: ASC 606 effective (Revenue recognition)
+2018-12-31: ASC 840 superseded by ASC 842
+2019-01-01: ASC 842 effective (New lease accounting)
+2020-01-01: ASC 326 (CECL) effective
+
+## Audit Trail Requirements (SOX 404)
+
+Required Fields:
+- Event ID (unique identifier)
+- Timestamp (ISO 8601 format)
+- Event Type (drift_detection, version_creation, retraining)
+- Approver (human-in-loop compliance officer)
+- Data Hash (SHA-256 cryptographic hash)
+- Immutability Flag (true for all entries)
+
+Retention: 7+ years (2,555 days minimum)
+
+## Regression Test Cases
+
+Test 1: Historical Lease Query (2018)
+Input: "How are operating leases accounted for in 2018?"
+Expected: ASC 840 reference, off-balance sheet treatment
+Version: ASC 840 (effective until 2018-12-31)
+
+Test 2: Current Lease Query (2023)
+Input: "How are operating leases accounted for today?"
+Expected: ASC 842 reference, on-balance sheet treatment
+Version: ASC 842 (effective from 2019-01-01)
+
+Test 3: Revenue Recognition (2019)
+Input: "What revenue recognition standard applies in 2019?"
+Expected: ASC 606 reference, five-step model
+Version: ASC 606 (effective from 2018-01-01)
+
+Test 4: Credit Losses (2021)
+Input: "How are credit losses estimated in 2021?"
+Expected: CECL model reference, forward-looking estimates
+Version: ASC 326 (effective from 2020-01-01)
+
+## Production Deployment Checklist
+
+[ ] Baseline embeddings generated and stored in Pinecone
+[ ] Version control system initialized with historical standards
+[ ] Regulatory monitoring scheduled (daily FASB/SEC checks)
+[ ] Drift detection pipeline configured (weekly runs)
+[ ] Human approval workflow established (5-day SLA)
+[ ] Retraining pipeline tested with sample documents
+[ ] Regression test suite created (200+ historical queries)
+[ ] Audit trail storage configured (PostgreSQL 7+ year retention)
+[ ] API endpoints secured with rate limiting
+[ ] Monitoring dashboards deployed (drift frequency, false positives)
+[ ] SOX compliance validated (immutable records, approver tracking)
+[ ] Cost tracking enabled (OpenAI API usage, Pinecone storage)
