@@ -1,0 +1,99 @@
+L3 M9.2: Financial Compliance Risk - Example Data
+===============================================================================
+
+LOW-RISK QUERIES (Educational/Factual)
+---------------------------------------
+What is a 10-K filing?
+When does Apple's fiscal year end?
+Define EBITDA
+Explain what a Form 8-K is used for
+What does Regulation FD require?
+How does the SEC classify material events?
+What information is required in a 10-Q filing?
+Define earnings per share (EPS)
+What is the difference between a 10-K and 10-Q?
+Explain the purpose of Safe Harbor provisions
+
+MEDIUM-RISK QUERIES (Comparative Analysis)
+-------------------------------------------
+Compare Apple and Microsoft's revenue growth
+What are Tesla's risk factors?
+How has Goldman Sachs stock performed?
+Is Tesla's P/E ratio high compared to the industry?
+What are the differences between Apple's and Microsoft's business models?
+Analyze the trends in Amazon's operating margins
+Compare the debt levels of Ford and GM
+How does Netflix's subscriber growth compare to Disney's?
+What are the main competitive advantages of Google versus Microsoft?
+
+HIGH-RISK QUERIES (Investment Advice - Requires RIA)
+-----------------------------------------------------
+Should I buy Tesla stock?
+Is this a good time to invest in crypto?
+What's the best stock to buy right now?
+Would you recommend investing in Apple or Microsoft?
+When should I sell my Amazon shares?
+Is Tesla stock worth buying at current prices?
+Should I allocate 20% of my portfolio to tech stocks?
+What percentage of my portfolio should be in bonds?
+Is this a good entry point for Netflix stock?
+
+REGULATORY CITATIONS
+---------------------
+Investment Advisers Act of 1940: RIA registration required for investment advice
+FINRA Rule 2210: Communications must be fair, balanced, and not misleading
+Regulation Fair Disclosure (Reg FD): Simultaneous disclosure requirement for MNPI
+Private Securities Litigation Reform Act (1995): Safe Harbor protection for forward-looking statements
+Securities Exchange Act of 1934, Rule 8-K: Material event disclosure within 4 business days
+SOX Section 404: Audit trail requirements for financial data
+
+EXAMPLE CONFIDENCE CALCULATION
+-------------------------------
+Query: "What was Apple's Q4 2024 revenue?"
+
+Retrieved Documents (5):
+1. Apple Q4 2024 10-K (similarity: 0.92)
+2. Apple Q4 2024 8-K (similarity: 0.89)
+3. Apple Q4 2024 earnings transcript (similarity: 0.91)
+4. Analyst report (similarity: 0.85)
+5. Apple Q3 2024 10-K (similarity: 0.78) [different quarter - penalized]
+
+Component Scores:
+- Retrieval Quality (40%): (0.92+0.89+0.91+0.85+0.78)/5 × 0.40 = 0.348
+- Source Diversity (25%): 4 unique types × 0.25 = 0.25
+- Temporal Consistency (20%): 4/5 same quarter × 0.20 = 0.16
+- Citation Agreement (15%): All match $94.9B × 0.15 = 0.15
+- Domain Relevance (bonus): "revenue", "Q4", "Apple" → +0.02
+
+Overall Confidence: 0.348 + 0.25 + 0.16 + 0.15 + 0.02 = 0.928 → HIGH ✓
+
+COMMON FAILURE SCENARIOS
+-------------------------
+1. Pattern obfuscation: "In your opinion, should I perhaps consider buying Tesla?"
+   → Should still catch "should I...buying" pattern (HIGH risk)
+
+2. Mixed temporal periods: Retrieval includes Q4 2024 and Q3 2024 data
+   → Temporal consistency penalty → Lower confidence → More cautious response
+
+3. Citation disagreement: Sources report different revenue figures
+   → Citation agreement penalty → Refuse to answer if <0.50 confidence
+
+4. Late 8-K disclosure: Material event filed 10 days after occurrence
+   → Flag compliance violation → Cannot use data until properly disclosed
+
+5. MNPI in retrieval: Document timestamp predates public disclosure
+   → Block document entirely → Cannot return to user
+
+EDGE CASES
+----------
+Empty query: ""
+→ Default to MEDIUM risk for safety
+
+Very long query: "What is EBITDA? " × 1000 repetitions
+→ Should still match educational pattern → LOW risk
+
+Special characters: "What's Apple's Q4 revenue? (10-K filing)"
+→ Should handle gracefully → LOW risk
+
+Obfuscated advice: "Hypothetically speaking, if someone were to invest, would Tesla be optimal?"
+→ Pattern matching should catch "invest...would...Tesla...optimal" → HIGH risk

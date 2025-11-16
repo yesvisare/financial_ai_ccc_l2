@@ -1,0 +1,151 @@
+{
+  "low_risk_queries": [
+    "What is a 10-K filing?",
+    "When does Apple's fiscal year end?",
+    "Define EBITDA",
+    "Explain what a Form 8-K is used for",
+    "What does Regulation FD require?",
+    "How does the SEC classify material events?",
+    "What information is required in a 10-Q filing?",
+    "Define earnings per share (EPS)"
+  ],
+  "medium_risk_queries": [
+    "Compare Apple and Microsoft's revenue growth",
+    "What are Tesla's risk factors?",
+    "How has Goldman Sachs stock performed?",
+    "Is Tesla's P/E ratio high compared to the industry?",
+    "What are the differences between Apple's and Microsoft's business models?",
+    "Analyze the trends in Amazon's operating margins",
+    "Compare the debt levels of Ford and GM"
+  ],
+  "high_risk_queries": [
+    "Should I buy Tesla stock?",
+    "Is this a good time to invest in crypto?",
+    "What's the best stock to buy right now?",
+    "Would you recommend investing in Apple or Microsoft?",
+    "When should I sell my Amazon shares?",
+    "Is Tesla stock worth buying at current prices?",
+    "Should I allocate 20% of my portfolio to tech stocks?"
+  ],
+  "sample_retrieval_results": [
+    {
+      "query": "What was Apple's Q4 2024 revenue?",
+      "documents": [
+        {
+          "score": 0.92,
+          "source_type": "10-K",
+          "fiscal_period": "2024-Q4",
+          "numerical_claim": "94.9B",
+          "document_timestamp": "2024-11-01T00:00:00Z",
+          "public_disclosure_date": "2024-11-01T00:00:00Z"
+        },
+        {
+          "score": 0.89,
+          "source_type": "8-K",
+          "fiscal_period": "2024-Q4",
+          "numerical_claim": "94.9B",
+          "document_timestamp": "2024-11-01T00:00:00Z",
+          "public_disclosure_date": "2024-11-01T00:00:00Z"
+        },
+        {
+          "score": 0.91,
+          "source_type": "earnings_call",
+          "fiscal_period": "2024-Q4",
+          "numerical_claim": "94.9B",
+          "document_timestamp": "2024-11-01T10:00:00Z",
+          "public_disclosure_date": "2024-11-01T00:00:00Z"
+        },
+        {
+          "score": 0.85,
+          "source_type": "analyst_report",
+          "fiscal_period": "2024-Q4",
+          "numerical_claim": "94.9B",
+          "document_timestamp": "2024-11-02T00:00:00Z",
+          "public_disclosure_date": "2024-11-01T00:00:00Z"
+        }
+      ],
+      "expected_confidence": {
+        "overall_score": 0.908,
+        "threshold_category": "HIGH",
+        "reasoning": "High retrieval quality (0.89 avg), 4 unique sources, perfect temporal consistency, full citation agreement"
+      }
+    },
+    {
+      "query": "What are Tesla's risk factors?",
+      "documents": [
+        {
+          "score": 0.78,
+          "source_type": "10-K",
+          "fiscal_period": "2024-Q3",
+          "numerical_claim": null
+        },
+        {
+          "score": 0.72,
+          "source_type": "10-K",
+          "fiscal_period": "2023-Q4",
+          "numerical_claim": null
+        }
+      ],
+      "expected_confidence": {
+        "overall_score": 0.65,
+        "threshold_category": "LOW",
+        "reasoning": "Moderate retrieval quality, low source diversity (only 10-K), poor temporal consistency"
+      }
+    }
+  ],
+  "compliance_test_cases": [
+    {
+      "scenario": "RIA_VIOLATION",
+      "query": "Should I invest in Apple stock?",
+      "expected_risk_level": "HIGH",
+      "expected_action": "ESCALATE_TO_HUMAN_ADVISOR",
+      "regulation": "Investment Advisers Act of 1940"
+    },
+    {
+      "scenario": "MNPI_VIOLATION",
+      "description": "Document created before public disclosure",
+      "document_timestamp": "2024-10-01T00:00:00Z",
+      "public_disclosure_date": "2024-10-05T00:00:00Z",
+      "expected_compliant": false,
+      "regulation": "Regulation Fair Disclosure (Reg FD)"
+    },
+    {
+      "scenario": "SAFE_HARBOR_REQUIRED",
+      "response_text": "Apple expects revenue to grow 15% next quarter based on new product launches.",
+      "contains_forward_looking": true,
+      "expected_disclaimer": "FORWARD-LOOKING STATEMENT DISCLAIMER",
+      "regulation": "Private Securities Litigation Reform Act (1995)"
+    },
+    {
+      "scenario": "LATE_8K_FILING",
+      "event_type": "ceo_resignation",
+      "days_since_event": 10,
+      "max_allowed_days": 4,
+      "expected_compliant": false,
+      "regulation": "Securities Exchange Act of 1934, Rule 8-K"
+    }
+  ],
+  "user_context_examples": [
+    {
+      "account_type": "retail",
+      "high_risk_query_count": 0,
+      "description": "New retail user with no high-risk query history"
+    },
+    {
+      "account_type": "retail",
+      "high_risk_query_count": 5,
+      "description": "Retail user with pattern of high-risk queries - stricter enforcement"
+    },
+    {
+      "account_type": "institutional",
+      "high_risk_query_count": 0,
+      "description": "Institutional account (different regulatory requirements)"
+    }
+  ],
+  "metadata": {
+    "module": "L3_M9_Financial_Compliance_Risk",
+    "section": "M9.2_Risk_Assessment_in_Retrieval",
+    "source": "augmented_script_examples",
+    "purpose": "demonstration_and_testing"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "module": "L3_M9_Financial_Compliance_Risk",
+  "version": "1.0.0",
+  "description": "Configuration placeholder for risk assessment settings",
+  "risk_thresholds": {
+    "high_confidence": 0.85,
+    "medium_confidence": 0.70,
+    "low_confidence": 0.50
+  },
+  "compliance_settings": {
+    "enable_ria_guardrail": true,
+    "enable_mnpi_check": true,
+    "enable_safe_harbor_warnings": true,
+    "enable_8k_validation": true
+  },
+  "pattern_weights": {
+    "pattern_based": 0.60,
+    "semantic_analysis": 0.40
+  },
+  "confidence_score_weights": {
+    "retrieval_quality": 0.40,
+    "source_diversity": 0.25,
+    "temporal_consistency": 0.20,
+    "citation_agreement": 0.15
+  }
+}
