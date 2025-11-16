@@ -1,0 +1,27 @@
+# FastAPI and Server Dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-dotenv==1.0.0
+
+# AWS SDK for CloudWatch, Route 53, RDS
+boto3==1.34.10
+botocore==1.34.10
+
+# PostgreSQL Database Driver
+psycopg2-binary==2.9.9
+
+# Pinecone Vector Database Client
+pinecone-client[grpc]==2.2.4
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Jupyter Notebook Support
+jupyter==1.0.0
+notebook==7.0.6
+ipykernel==6.27.1
+
+# Utilities
+python-dateutil==2.8.2

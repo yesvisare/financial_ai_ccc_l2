@@ -1,0 +1,52 @@
+Sample DR Test Scenarios for Financial RAG Systems
+
+Scenario 1: Hard Drive Failure - Primary Region
+Timeline: 09:35 AM - Hard drive fails in US-EAST-1 RDS instance
+Expected RTO: 8 minutes
+Expected Data Loss: 2 minutes of documents
+Failover Target: US-WEST-2 DR region
+
+Scenario 2: Quarterly DR Test Execution
+Test Date: 2024-12-15 14:00 UTC
+Pre-Test: 10,432 documents in primary
+Post-Test: 10,428 documents in DR (4 documents in-flight)
+Measured RTO: 8 minutes (Target: 15 minutes) - PASS
+Measured RPO: 5 minutes (Target: 60 minutes) - PASS
+
+Scenario 3: Document Ingestion During Replication
+Batch Size: 500 earnings reports for financial institutions
+Total Size: 250 MB
+Processing Time: 8 minutes
+Replication Lag During Ingestion: 2-3 minutes
+Final Sync Time: 10 minutes
+
+Sample Financial Queries:
+- What were earnings trends for Apple Inc in 2023?
+- Provide analysis of Bank of America Q3 2024 earnings report
+- What is the current P/E ratio for technology sector companies?
+- Show me risk factors disclosed in Tesla's latest 10-K filing
+- Compare revenue growth rates for major financial institutions
+
+RTO/RPO Requirements:
+RTO (Recovery Time Objective): 15 minutes maximum
+RPO (Recovery Point Objective): 1 hour maximum data loss
+Typical Performance: 8-12 minute RTO, 5-10 minute RPO
+
+Compliance Requirements:
+FINRA Rule 4370: Quarterly DR testing required
+SOX Section 404: 7-year document retention
+GLBA: Encryption at rest and in transit
+SEC: Complete audit trail for trading decisions
+
+Infrastructure Components:
+Primary Region: US-EAST-1 (Pinecone, RDS PostgreSQL Multi-AZ, EC2 AutoScaling)
+DR Region: US-WEST-2 (Pinecone Replica, RDS Read Replica, EC2 AutoScaling)
+DNS Failover: Route 53 with 60-second TTL
+Monitoring: CloudWatch, PagerDuty integration
+Backup: S3 + Glacier for 7-year retention
+
+Cost Structure:
+Monthly DR Infrastructure: ₹2.5L (~$3,000 USD)
+Cost per Hour of Downtime: ₹30K (~$360 USD) in direct losses
+Break-even: Hot DR pays for itself if prevents ONE major outage every 4 years
+Estimated ROI: Positive given typical hardware failure rates (1-2 incidents per decade)

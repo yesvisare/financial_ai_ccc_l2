@@ -1,0 +1,27 @@
+{
+  "dr_config": {
+    "rto_target_minutes": 15,
+    "rpo_target_minutes": 60,
+    "replication_lag_threshold_seconds": 600,
+    "data_consistency_threshold": 0.99
+  },
+  "regions": {
+    "primary": "us-east-1",
+    "dr": "us-west-2"
+  },
+  "health_checks": {
+    "interval_seconds": 30,
+    "consecutive_failures_threshold": 3,
+    "timeout_seconds": 10
+  },
+  "failover": {
+    "dns_ttl_seconds": 60,
+    "verification_timeout_seconds": 300,
+    "auto_failover_enabled": false
+  },
+  "compliance": {
+    "finra_test_frequency_days": 90,
+    "sox_retention_years": 7,
+    "report_generation_enabled": true
+  }
+}

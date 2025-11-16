@@ -1,0 +1,66 @@
+{
+  "dr_test_scenarios": [
+    {
+      "scenario": "Hard Drive Failure in Primary Region",
+      "description": "Hard drive fails in US-EAST-1 RDS instance during market hours",
+      "expected_rto_minutes": 8.5,
+      "expected_data_loss_minutes": 2,
+      "region_impact": "us-east-1",
+      "failover_target": "us-west-2"
+    },
+    {
+      "scenario": "Data Center Power Outage",
+      "description": "Complete power loss in primary AWS availability zone",
+      "expected_rto_minutes": 10,
+      "expected_data_loss_minutes": 5,
+      "region_impact": "us-east-1",
+      "failover_target": "us-west-2"
+    },
+    {
+      "scenario": "Network Partition Between Regions",
+      "description": "Cross-region network connectivity lost, replication lag spikes",
+      "expected_rto_minutes": 12,
+      "expected_data_loss_minutes": 30,
+      "region_impact": "cross-region",
+      "failover_target": "manual-intervention"
+    }
+  ],
+
+  "sample_queries": [
+    "What were earnings trends for Apple Inc in 2023?",
+    "Provide analysis of Bank of America Q3 2024 earnings report",
+    "What is the current P/E ratio for technology sector companies?",
+    "Show me risk factors disclosed in Tesla's latest 10-K filing",
+    "Compare revenue growth rates for major financial institutions"
+  ],
+
+  "replication_metrics": {
+    "target_lag_seconds": 5,
+    "max_acceptable_lag_seconds": 600,
+    "rpo_seconds": 3600,
+    "typical_consistency_ratio": 0.998
+  },
+
+  "compliance_requirements": {
+    "finra_rule_4370": {
+      "test_frequency": "quarterly",
+      "rto_target_minutes": 15,
+      "documentation_required": true
+    },
+    "sox_section_404": {
+      "retention_years": 7,
+      "backup_encryption": true,
+      "audit_trail": true
+    },
+    "glba": {
+      "data_encryption_at_rest": true,
+      "data_encryption_in_transit": true
+    }
+  },
+
+  "metadata": {
+    "source": "L3_M10.4_DisasterRecovery_BusinessContinuity",
+    "purpose": "demonstration_and_testing",
+    "created": "2024-12-15T14:00:00Z"
+  }
+}
