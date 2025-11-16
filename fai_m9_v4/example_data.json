@@ -1,0 +1,119 @@
+{
+  "queries": [
+    {
+      "user_id": "pm_001",
+      "query_text": "Approve $8M increase in Tesla position based on Q3 earnings beat",
+      "transaction_amount": 8000000,
+      "action_type": "investment_decision",
+      "expected_risk": "HIGH",
+      "description": "Tesla case study from augmented script - earnings beat driven by one-time tax benefit"
+    },
+    {
+      "user_id": "pm_002",
+      "query_text": "What is Tesla's current market capitalization?",
+      "transaction_amount": 0,
+      "action_type": "informational",
+      "expected_risk": "LOW",
+      "description": "Informational query requiring no financial decision"
+    },
+    {
+      "user_id": "trader_003",
+      "query_text": "Approve $12M acquisition of XYZ Corp based on due diligence",
+      "transaction_amount": 12000000,
+      "action_type": "m_and_a_analysis",
+      "expected_risk": "CRITICAL",
+      "description": "M&A transaction exceeding $10M threshold, requires CFO review"
+    },
+    {
+      "user_id": "analyst_004",
+      "query_text": "Perform sector comparison between tech and healthcare Q3 performance",
+      "transaction_amount": 0,
+      "action_type": "sector_comparison",
+      "expected_risk": "MEDIUM",
+      "description": "Analytical task requiring conditional review"
+    },
+    {
+      "user_id": "pm_005",
+      "query_text": "Rebalance portfolio by reducing energy exposure from 15% to 10%",
+      "transaction_amount": 5000000,
+      "action_type": "portfolio_rebalancing",
+      "expected_risk": "HIGH",
+      "description": "Portfolio rebalancing with $5M impact"
+    },
+    {
+      "user_id": "credit_006",
+      "query_text": "Approve $2.5M commercial loan to ABC Manufacturing",
+      "transaction_amount": 2500000,
+      "action_type": "credit_approval",
+      "expected_risk": "HIGH",
+      "description": "Credit decision requiring senior analyst review"
+    },
+    {
+      "user_id": "analyst_007",
+      "query_text": "Analyze Q3 earnings report for Microsoft",
+      "transaction_amount": 0,
+      "action_type": "earnings_analysis",
+      "expected_risk": "MEDIUM",
+      "description": "Earnings analysis with no immediate financial impact"
+    },
+    {
+      "user_id": "trader_008",
+      "query_text": "Execute $500K position in S&P 500 ETF",
+      "transaction_amount": 500000,
+      "action_type": "investment_decision",
+      "expected_risk": "MEDIUM",
+      "description": "Investment below $1M threshold but warrants conditional review"
+    },
+    {
+      "user_id": "compliance_009",
+      "query_text": "Review client portfolio for concentration limit compliance",
+      "transaction_amount": 0,
+      "action_type": "risk_assessment",
+      "expected_risk": "MEDIUM",
+      "description": "Compliance check with regulatory implications"
+    },
+    {
+      "user_id": "cfo_010",
+      "query_text": "Approve disclosure of Q4 earnings guidance (MNPI)",
+      "transaction_amount": 0,
+      "action_type": "investment_decision",
+      "contains_mnpi": true,
+      "expected_risk": "CRITICAL",
+      "description": "Material non-public information disclosure requiring executive review"
+    }
+  ],
+  "review_examples": [
+    {
+      "audit_id": "example_001",
+      "reviewer_id": "analyst_senior_42",
+      "reviewer_role": "Senior Analyst",
+      "decision_outcome": "rejected",
+      "supporting_evidence": "Q3 earnings beat driven by $200M one-time tax benefit. Excluding one-time gain, Tesla missed estimates by $0.04. Proposed $20M position breaches 5% concentration limit. Recommend modified $4M increase to $16M (4% concentration)."
+    },
+    {
+      "audit_id": "example_002",
+      "reviewer_id": "analyst_junior_15",
+      "reviewer_role": "Junior Analyst",
+      "decision_outcome": "approved",
+      "supporting_evidence": "Informational query with no financial impact. Market cap data is publicly available and current."
+    },
+    {
+      "audit_id": "example_003",
+      "reviewer_id": "cfo_001",
+      "reviewer_role": "CFO",
+      "decision_outcome": "escalated",
+      "supporting_evidence": "$12M M&A transaction requires board committee approval. Due diligence incomplete - missing environmental liability assessment. Escalate to Board Audit Committee."
+    }
+  ],
+  "metadata": {
+    "source": "Augmented_FinanceAI_M9_4_HumanInTheLoop_HighStakes.md",
+    "purpose": "Demonstration and testing",
+    "total_examples": 10,
+    "risk_distribution": {
+      "CRITICAL": 2,
+      "HIGH": 4,
+      "MEDIUM": 3,
+      "LOW": 1
+    }
+  }
+}

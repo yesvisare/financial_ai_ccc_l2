@@ -1,0 +1,58 @@
+{
+  "workflow_config": {
+    "name": "Financial HITL Workflow",
+    "version": "1.0.0",
+    "description": "Human-in-the-loop configuration for financial compliance and risk"
+  },
+  "risk_thresholds": {
+    "transaction_amount": {
+      "critical": 10000000,
+      "high": 1000000,
+      "medium": 100000
+    },
+    "model_confidence": {
+      "minimum_acceptable": 0.70
+    }
+  },
+  "sla_configuration": {
+    "critical": 2,
+    "high": 4,
+    "medium": 8,
+    "low": 24
+  },
+  "reviewer_roles": [
+    "Junior Analyst",
+    "Analyst",
+    "Senior Analyst",
+    "Head of Trading",
+    "CFO"
+  ],
+  "action_types": {
+    "high_risk": [
+      "investment_decision",
+      "portfolio_rebalancing",
+      "credit_approval",
+      "m_and_a_analysis"
+    ],
+    "medium_risk": [
+      "earnings_analysis",
+      "sector_comparison",
+      "risk_assessment"
+    ],
+    "low_risk": [
+      "informational",
+      "historical_data",
+      "definition"
+    ]
+  },
+  "notification_settings": {
+    "email_enabled": false,
+    "slack_enabled": false,
+    "sla_warning_threshold": 0.8
+  },
+  "audit_settings": {
+    "retention_days": 2555,
+    "hash_algorithm": "sha256",
+    "enable_tamper_detection": true
+  }
+}

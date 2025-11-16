@@ -1,0 +1,40 @@
+Example Financial Queries for Human-in-the-Loop Testing
+========================================================
+
+CRITICAL RISK QUERIES
+---------------------
+Approve $12M acquisition of XYZ Corp based on due diligence
+Approve disclosure of Q4 earnings guidance (contains MNPI)
+Execute $15M leveraged buyout of competitor firm
+
+HIGH RISK QUERIES
+-----------------
+Approve $8M increase in Tesla position based on Q3 earnings beat
+Rebalance portfolio by reducing energy exposure from 15% to 10% ($5M impact)
+Approve $2.5M commercial loan to ABC Manufacturing
+Increase Amazon position from $10M to $18M following AWS growth
+
+MEDIUM RISK QUERIES
+-------------------
+Perform sector comparison between tech and healthcare Q3 performance
+Analyze Q3 earnings report for Microsoft
+Execute $500K position in S&P 500 ETF
+Review client portfolio for concentration limit compliance
+Assess risk exposure across fixed income holdings
+
+LOW RISK QUERIES
+----------------
+What is Tesla's current market capitalization?
+Retrieve historical stock prices for Apple (2020-2024)
+Define the term "yield curve inversion"
+Show me the components of the S&P 500 index
+
+SUPPORTING EVIDENCE EXAMPLES
+-----------------------------
+REJECTED: Q3 earnings beat driven by $200M one-time tax benefit. Excluding one-time gain, Tesla missed estimates by $0.04. Proposed $20M position breaches 5% concentration limit. Recommend modified $4M increase to $16M (4% concentration).
+
+APPROVED: Loan applicant demonstrates strong credit history (780 FICO), debt-to-income ratio of 28%, and 5-year business track record. Collateral valuation at 140% of loan amount. Approve $2.5M at prime + 1.5%.
+
+MODIFIED: Original rebalancing proposal too aggressive given current market volatility (VIX at 28). Recommend phased approach: reduce energy exposure by 2.5% per quarter over 2 quarters instead of immediate 5% reduction.
+
+ESCALATED: M&A due diligence incomplete - missing environmental liability assessment and pension obligation analysis. Potential undisclosed liabilities could exceed $3M. Escalate to Board Audit Committee for further review.
