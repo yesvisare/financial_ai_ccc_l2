@@ -1,0 +1,163 @@
+{
+  "test_cases": [
+    {
+      "name": "Public Information - No Violation",
+      "llm_output": "According to the Q3 2023 10-Q filing, revenue was $2.5 billion, representing 15% year-over-year growth.",
+      "citations": [
+        {
+          "source_id": "sec_10q_20231115",
+          "source_type": "10-Q",
+          "document_url": "https://sec.gov/Archives/edgar/data/...",
+          "filing_date": "2023-11-15",
+          "data_namespace": "public"
+        }
+      ],
+      "expected_result": "allowed",
+      "expected_disclaimers": ["general"]
+    },
+    {
+      "name": "MNPI Violation - Internal Forecast",
+      "llm_output": "Based on internal forecasts, Q4 earnings will exceed $3 billion, driven by strong holiday sales.",
+      "citations": [
+        {
+          "source_id": "internal_forecast_2024",
+          "source_type": "internal planning document",
+          "document_url": null,
+          "filing_date": null,
+          "data_namespace": "internal"
+        }
+      ],
+      "expected_result": "blocked",
+      "expected_violation": "MNPI"
+    },
+    {
+      "name": "Investment Advice - Disclaimer Required",
+      "llm_output": "Based on strong fundamentals and market position, we recommend buying XYZ stock at current prices below $50.",
+      "citations": [
+        {
+          "source_id": "market_analysis_2024",
+          "source_type": "public market analysis",
+          "data_namespace": "public"
+        }
+      ],
+      "expected_result": "allowed",
+      "expected_disclaimers": ["investment_advice"]
+    },
+    {
+      "name": "Forward-Looking Statement - Safe Harbor Required",
+      "llm_output": "The company expects revenue growth of 20-25% in fiscal year 2025, with improved operating margins.",
+      "citations": [
+        {
+          "source_id": "earnings_call_transcript",
+          "source_type": "earnings call",
+          "data_namespace": "public"
+        }
+      ],
+      "expected_result": "allowed",
+      "expected_disclaimers": ["forward_looking"]
+    },
+    {
+      "name": "MNPI Violation - Merger Plans",
+      "llm_output": "Confidential board minutes reveal plans to acquire TechCorp for $500 million, announcement expected next month.",
+      "citations": [
+        {
+          "source_id": "board_minutes_2024_03",
+          "source_type": "board minutes",
+          "data_namespace": "restricted"
+        }
+      ],
+      "expected_result": "blocked",
+      "expected_violation": "MNPI"
+    },
+    {
+      "name": "Executive Change - Material Event",
+      "llm_output": "The CEO is expected to announce retirement in Q2 2024, with succession planning underway.",
+      "citations": [
+        {
+          "source_id": "exec_memo_2024",
+          "source_type": "executive memo",
+          "data_namespace": "internal"
+        }
+      ],
+      "expected_result": "blocked",
+      "expected_violation": "MNPI"
+    },
+    {
+      "name": "Historical Data - No Issues",
+      "llm_output": "Historical stock prices show XYZ traded between $40-$60 during 2023, with average daily volume of 2M shares.",
+      "citations": [
+        {
+          "source_id": "market_data_2023",
+          "source_type": "public market data",
+          "data_namespace": "public"
+        }
+      ],
+      "expected_result": "allowed",
+      "expected_disclaimers": ["general"]
+    },
+    {
+      "name": "Product Launch - Forward-Looking",
+      "llm_output": "The company plans to launch its new AI platform in Q3 2024, targeting enterprise customers.",
+      "citations": [
+        {
+          "source_id": "press_release_2024_01",
+          "source_type": "press release",
+          "data_namespace": "public"
+        }
+      ],
+      "expected_result": "allowed",
+      "expected_disclaimers": ["forward_looking"]
+    },
+    {
+      "name": "Selective Disclosure Risk",
+      "llm_output": "Internal analysis suggests margin expansion opportunities in the Asia-Pacific region.",
+      "citations": [
+        {
+          "source_id": "strategy_doc_2024",
+          "source_type": "internal strategy document",
+          "data_namespace": "restricted"
+        }
+      ],
+      "expected_result": "blocked",
+      "expected_violation": "MNPI"
+    },
+    {
+      "name": "Analyst Price Target - Investment Advice",
+      "llm_output": "Analysts have set a price target of $75 for XYZ stock, implying 25% upside from current levels.",
+      "citations": [
+        {
+          "source_id": "analyst_report_2024",
+          "source_type": "public analyst report",
+          "data_namespace": "public"
+        }
+      ],
+      "expected_result": "allowed",
+      "expected_disclaimers": ["investment_advice"]
+    }
+  ],
+  "user_permissions": {
+    "analyst_external": ["public"],
+    "analyst_internal": ["public", "internal"],
+    "executive": ["public", "internal", "restricted"]
+  },
+  "public_disclosures": [
+    {
+      "event_type": "earnings",
+      "date": "2023-11-15",
+      "document_type": "10-Q",
+      "ticker": "XYZ"
+    },
+    {
+      "event_type": "press_release",
+      "date": "2024-01-15",
+      "document_type": "8-K",
+      "ticker": "XYZ"
+    }
+  ],
+  "metadata": {
+    "module": "L3_M9.3_Regulatory_Constraints",
+    "purpose": "Test cases for compliance filtering",
+    "source": "Augmented script examples",
+    "version": "1.0.0"
+  }
+}

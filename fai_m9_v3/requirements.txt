@@ -1,0 +1,39 @@
+# Core Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-dotenv==1.0.0
+
+# LLM Service (Auto-detected: ANTHROPIC from M9.1 integration)
+anthropic==0.8.1
+
+# Database & Caching
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.23
+redis==5.0.1
+
+# NLP & Pattern Matching
+spacy==3.7.2
+regex==2023.10.3
+python-dateutil==2.8.2
+
+# Logging & Monitoring
+structlog==23.2.0
+
+# Testing & Development
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+
+# Jupyter Notebook Support
+jupyter==1.0.0
+nbformat==5.9.2
+ipykernel==6.27.1
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.2
+
+# Additional from Generic CCC M1-M4
+langchain==0.1.0
+langchain-community==0.0.10

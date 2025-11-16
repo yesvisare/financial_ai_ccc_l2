@@ -1,0 +1,97 @@
+# L3 M9.3: Example Test Cases (Text Format)
+
+## Public Information Examples (Should PASS compliance)
+
+Q3 earnings were $2.5 billion according to the 10-Q filing.
+
+The company reported revenue growth of 15% year-over-year in the latest quarterly report.
+
+Historical stock prices show trading range of $40-60 during 2023.
+
+The CEO announced plans to expand into European markets during the earnings call.
+
+
+## MNPI Violations (Should BLOCK)
+
+Based on internal forecasts, Q4 earnings will exceed $3 billion.
+
+Confidential board minutes reveal merger plans with TechCorp valued at $500M.
+
+The CEO is expected to announce retirement next quarter (from internal memo).
+
+Internal analysis suggests 25% margin expansion in Asia-Pacific region.
+
+Draft earnings guidance: Q1 2024 EPS projected at $2.50 (not yet disclosed).
+
+
+## Investment Advice (Should ADD DISCLAIMER)
+
+We recommend buying XYZ stock at current prices below $50.
+
+This stock appears undervalued based on P/E ratio analysis.
+
+Target price for ABC Corp is $75, representing 20% upside.
+
+Investors should sell DEF stock before the expected price decline.
+
+Strong buy rating based on fundamental analysis and growth prospects.
+
+
+## Forward-Looking Statements (Should ADD SAFE HARBOR)
+
+The company expects revenue growth of 20-25% in fiscal year 2025.
+
+Management anticipates improved operating margins through cost optimization.
+
+Q4 2024 earnings will likely exceed analyst expectations.
+
+We project market share expansion in the healthcare sector.
+
+The product launch is expected to drive significant revenue in 2025.
+
+
+## Multiple Disclaimers Required
+
+We recommend buying this stock. The company will grow 30% next year.
+(Requires both: Investment Advice + Forward-Looking disclaimers)
+
+This undervalued stock is expected to reach $100 within 12 months.
+(Requires both: Investment Advice + Forward-Looking disclaimers)
+
+
+## Edge Cases
+
+Empty content with no material information.
+
+Generic market commentary without specific recommendations or forecasts.
+
+Historical data analysis with no forward-looking elements or advice.
+
+
+## Materiality Indicators
+
+EARNINGS: Q4 earnings projected at $3.5B with EPS of $2.10
+MERGER: Acquiring TechCorp in deal valued at $500 million
+EXECUTIVE: CEO resignation expected, succession planning underway
+PRODUCT: New AI platform launch targeting enterprise customers
+GUIDANCE: Full-year revenue guidance revised upward to $12B
+
+## Selective Disclosure Scenarios
+
+User A (external analyst) queries internal forecast → BLOCKED
+User B (internal analyst) queries same forecast → ALLOWED (with disclaimers)
+User C (executive) queries board minutes → ALLOWED (if restricted access)
+
+## Compliance Test Matrix
+
+| Query | Source Type | User Role | Expected Result |
+|-------|-------------|-----------|-----------------|
+| "Q3 earnings were $2.5B" | 10-Q filing | External | ALLOWED |
+| "Q4 forecast is $3B" | Internal memo | External | BLOCKED (MNPI) |
+| "Q4 forecast is $3B" | Internal memo | Internal | BLOCKED (MNPI) |
+| "Recommend buying stock" | Public report | External | ALLOWED + Disclaimer |
+| "Merger plans with XYZ" | Board minutes | External | BLOCKED (MNPI) |
+| "Revenue will grow 20%" | Press release | External | ALLOWED + Safe Harbor |
+
+---
+End of example data

@@ -1,0 +1,25 @@
+{
+  "compliance_settings": {
+    "mnpi_detection_threshold": 0.85,
+    "enable_auto_disclaimers": true,
+    "escalate_investment_advice": true
+  },
+  "database_settings": {
+    "postgres_host": "localhost",
+    "postgres_port": 5432,
+    "postgres_db": "financial_compliance"
+  },
+  "api_settings": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "reload": true
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "rate_limiting": {
+    "enabled": false,
+    "max_requests_per_minute": 100
+  }
+}
