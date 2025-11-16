@@ -1,0 +1,20 @@
+{
+  "retrieval": {
+    "k": 5,
+    "relevance_threshold": 0.70,
+    "namespace": "sec-filings"
+  },
+  "verification": {
+    "similarity_threshold": 0.85,
+    "min_fidelity": 0.95
+  },
+  "filters": {
+    "ticker": "TSLA",
+    "fiscal_period": "Q2 2024"
+  },
+  "settings": {
+    "timeout": 30,
+    "max_retries": 3,
+    "log_level": "INFO"
+  }
+}

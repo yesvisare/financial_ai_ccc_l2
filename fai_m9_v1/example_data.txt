@@ -1,0 +1,81 @@
+Tesla Inc - 10-Q Excerpt - Q2 2024 - Filed 2024-08-03
+
+Financial Statements - Page 5:
+Free cash flow for Q2 2024 was negative $1.0B, primarily driven by $2.3B in capital expenditures for manufacturing expansion. This compares to negative $0.2B in Q1 2024.
+
+Cash Flow Statement - Page 7:
+Operating cash flow improved to $1.3B compared to $0.5B in Q1 2024, indicating operational efficiency gains. The improvement was driven by better working capital management and increased vehicle deliveries.
+
+Management Discussion & Analysis - Page 12:
+Capital expenditures totaled $2.3B for the quarter, focused on Gigafactory expansion in Texas and Berlin, as well as new equipment purchases for next-generation vehicle production. We expect CapEx to normalize in Q3 2024.
+
+---
+
+Tesla Inc - Earnings Call Transcript - Q2 2024 - July 23, 2024
+
+Elon Musk (CEO):
+We expect to achieve positive free cash flow in Q3 2024 as capital expenditures normalize and operational efficiency continues to improve. Our focus remains on scaling production while maintaining cost discipline.
+
+---
+
+Apple Inc - 10-Q Excerpt - Q3 2024 - Filed 2024-08-02
+
+Revenue - Page 3:
+Total net sales for Q3 2024 were $81.8B, representing a 5% decline year-over-year. iPhone revenue declined 10% while Services revenue grew 14%, partially offsetting hardware declines.
+
+---
+
+Example of Conflicting Sources:
+
+Source 1 (10-Q): "Revenue declined 5% year-over-year to $81.8B"
+Source 2 (Earnings Call): "Revenue was essentially flat year-over-year at $82.0B on a constant currency basis"
+Source 3 (Analyst Report): "Revenue grew 2% year-over-year when adjusted for divested businesses"
+
+Proper Response: "Revenue shows mixed signals: 10-Q reports 5% decline [1], earnings call describes results as flat on constant currency basis [2], while analysts calculate 2% growth when adjusted for divestitures [3]. Discrepancies stem from different accounting adjustments."
+
+---
+
+Example of Citation Verification Failure:
+
+Claim: "Apple revenue was $100B in Q3 2024 [1]"
+Citation [1] Text: "Total net sales for Q3 2024 were $81.8B"
+
+Verification Result: UNSUPPORTED
+Similarity Score: 0.65 (below 0.85 threshold)
+Reason: Claimed revenue ($100B) does not match cited text ($81.8B)
+Action: Flag for human review, potentially hallucination
+
+---
+
+Example of Proper Citation:
+
+Claim: "Apple revenue was $81.8B in Q3 2024 [1], down 5% year-over-year [1]"
+Citation [1] Text: "Total net sales for Q3 2024 were $81.8B, representing a 5% decline year-over-year"
+
+Verification Result: SUPPORTED
+Similarity Score: 0.95
+Reason: Claim matches cited text exactly
+Action: Pass verification
+
+---
+
+Regulatory Context Examples:
+
+SEC Regulation S-P Requirement:
+"Financial institutions must provide clients with clear explanations of how automated systems generate investment recommendations, including data sources and decision logic."
+
+SOX Section 404 Requirement:
+"Companies must maintain internal controls over financial reporting, including audit trails demonstrating data accuracy and integrity for minimum 7 years."
+
+Investment Advisers Act Section 206(4):
+"Investment advisors must act in client's best interest and maintain records supporting all recommendations provided to clients."
+
+---
+
+Production Deployment Checklist Item Examples:
+
+1. Citation Accuracy: Test system on 100+ real SEC filings, achieve >95% citation accuracy
+2. Audit Logging: Verify all 5 components log correctly (query, retrieval, response, citations, verification)
+3. Verification Threshold: Calibrate semantic similarity threshold (recommended: 0.85-0.90)
+4. Monitoring: Set up alerts for citation drift, verification failures, query anomalies
+5. Compliance Documentation: Prepare SOX 404 control documentation for SEC examination

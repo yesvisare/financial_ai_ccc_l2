@@ -1,0 +1,75 @@
+{
+  "queries": [
+    "What was Tesla's Q2 2024 free cash flow?",
+    "What was Apple's revenue for Q3 2024?",
+    "Did Tesla's revenue increase or decrease in Q2 2024?",
+    "What were the capital expenditures for Tesla in Q2 2024?",
+    "What is the guidance for Q3 2024 revenue?",
+    "How did operating cash flow change quarter-over-quarter?",
+    "What are the main risk factors mentioned in the latest 10-K?",
+    "What did the CEO say about future growth prospects in the latest earnings call?",
+    "Compare revenue growth between Q1 and Q2 2024",
+    "What are the key differences between GAAP and non-GAAP earnings?"
+  ],
+  "filters": [
+    {
+      "ticker": "TSLA",
+      "fiscal_period": "Q2 2024"
+    },
+    {
+      "ticker": "AAPL",
+      "fiscal_period": "Q3 2024"
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_period": "Q1 2024"
+    }
+  ],
+  "metadata": {
+    "source": "L3_M9.1_Explainability_Citation_Tracking",
+    "purpose": "demonstration_and_testing",
+    "document_types": [
+      "10-K",
+      "10-Q",
+      "8-K",
+      "Earnings Call Transcript"
+    ]
+  },
+  "sample_citations": {
+    "[1]": {
+      "source_type": "10-Q",
+      "ticker": "TSLA",
+      "company_name": "Tesla Inc",
+      "filing_date": "2024-08-03",
+      "fiscal_period": "Q2 2024",
+      "section": "Financial Statements",
+      "page_number": 5,
+      "direct_quote": "Free cash flow for Q2 2024 was negative $1.0B, primarily driven by $2.3B in capital expenditures for manufacturing expansion.",
+      "relevance_score": 0.92,
+      "document_url": "https://www.sec.gov/edgar/browse-edgar"
+    },
+    "[2]": {
+      "source_type": "10-Q",
+      "ticker": "TSLA",
+      "company_name": "Tesla Inc",
+      "filing_date": "2024-08-03",
+      "fiscal_period": "Q2 2024",
+      "section": "Cash Flow Statement",
+      "page_number": 7,
+      "direct_quote": "Operating cash flow improved to $1.3B compared to $0.5B in Q1 2024, indicating operational efficiency gains.",
+      "relevance_score": 0.88,
+      "document_url": "https://www.sec.gov/edgar/browse-edgar"
+    },
+    "[3]": {
+      "source_type": "Earnings Call Transcript",
+      "ticker": "TSLA",
+      "company_name": "Tesla Inc",
+      "call_date": "2024-07-23",
+      "fiscal_period": "Q2 2024",
+      "speaker": "Elon Musk",
+      "direct_quote": "We expect to achieve positive free cash flow in Q3 2024 as capital expenditures normalize and operational efficiency continues to improve.",
+      "relevance_score": 0.85,
+      "call_type": "earnings"
+    }
+  }
+}
