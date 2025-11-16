@@ -1,0 +1,147 @@
+Sample Financial RAG Queries and Responses
+===========================================
+
+Query 1: Apple Earnings Guidance
+Query: What is Apple's latest earnings guidance?
+Expected Response: Apple's Q4 2024 guidance indicates revenue of $90-92B...
+Data Sources: SEC_EDGAR, BLOOMBERG
+MNPI Risk: No
+
+Query 2: Tesla Cash Flow
+Query: Show me Tesla's cash flow statement
+Expected Response: Tesla's Q3 2024 operating cash flow was $3.2B...
+Data Sources: SEC_EDGAR
+MNPI Risk: No
+
+Query 3: Microsoft Risk Factors
+Query: What are the risks mentioned in Microsoft's latest 10-K?
+Expected Response: Microsoft's FY2024 10-K identifies key risks including cybersecurity...
+Data Sources: SEC_EDGAR
+MNPI Risk: No
+
+Query 4: Amazon vs Walmart Operating Margins
+Query: Compare Amazon and Walmart's operating margins
+Expected Response: Amazon's TTM operating margin is 5.8%, while Walmart's is 4.2%...
+Data Sources: BLOOMBERG
+MNPI Risk: No
+
+Query 5: NVIDIA Earnings (MNPI Violation)
+Query: What is the upcoming earnings announcement for NVIDIA?
+Expected Response: ⚠️ BLOCKED - Material Non-Public Information
+Data Sources: None
+MNPI Risk: YES - Contains "upcoming earnings" keyword
+
+Query 6: JP Morgan Capital Ratios
+Query: Analyze JP Morgan's capital adequacy ratios
+Expected Response: JPMorgan Chase's Q3 2024 CET1 ratio is 15.3%...
+Data Sources: SEC_EDGAR
+MNPI Risk: No
+
+Query 7: Google R&D Spending
+Query: What is Google's R&D spending trend?
+Expected Response: Alphabet's R&D expenses have grown from $31.6B to $46.2B...
+Data Sources: SEC_EDGAR, INTERNAL_MODELS
+MNPI Risk: No
+
+Query 8: Meta User Growth
+Query: Show me Meta's user growth metrics
+Expected Response: Meta's Q3 2024 DAUs reached 2.11B (+5% YoY)...
+Data Sources: SEC_EDGAR
+MNPI Risk: No
+
+MNPI Keywords to Monitor
+========================
+- upcoming earnings
+- pre-announcement
+- insider trading
+- material non-public
+- confidential merger
+- acquisition target
+- unreleased guidance
+- private placement
+
+Data Staleness SLA Thresholds
+==============================
+Bloomberg Terminal: <5 minutes (0.083 hours)
+SEC EDGAR: <24 hours
+Internal Financial Models: <1 hour
+Real-time Market Data: <5 minutes (0.083 hours)
+Research Reports: <24 hours
+
+Citation Accuracy Examples
+===========================
+GOOD Citation:
+  source: "SEC_EDGAR_AAPL_10Q_2024Q4"
+  page: 12
+  quote: "Revenue guidance $90-92B for Q4 2024"
+
+BAD Citation (missing page):
+  source: "SEC_EDGAR_AAPL_10Q_2024Q4"
+  quote: "Revenue guidance $90-92B"
+
+BAD Citation (no quote):
+  source: "SEC_EDGAR_AAPL_10Q_2024Q4"
+  page: 12
+
+Compliance Violation Test Cases
+================================
+1. MNPI Detection: "The upcoming earnings will exceed expectations" → BLOCK
+2. Privilege Breach: "According to attorney-client privileged memo..." → BLOCK
+3. Export Control: "This ITAR controlled financial model..." → BLOCK
+4. Valid Public Data: "According to the 10-K filed on March 15..." → ALLOW
+
+Audit Trail Requirements (SOX 404)
+===================================
+- Every query must generate an audit log entry
+- Retention period: 7 years (2555 days)
+- Storage: S3 Standard → Glacier after 90 days
+- Required fields:
+  * Timestamp (ISO 8601 format)
+  * Query hash (SHA-256, not raw query for privacy)
+  * Citations count
+  * Compliance status (passed/violations)
+  * Latency (seconds)
+  * User context (role/department)
+  * Data sources used
+
+Alert Escalation Examples
+==========================
+Scenario 1: Bloomberg data is 10 minutes stale
+  Threshold: 5 minutes
+  Escalation: Data Engineering on-call
+  Response Time: 15 minutes
+  Action: Check data ingestion pipeline
+
+Scenario 2: MNPI keyword detected in response
+  Threshold: Zero tolerance
+  Escalation: Compliance Officer (immediate)
+  Response Time: Immediate
+  Action: Block query, audit user access, file incident report
+
+Scenario 3: Citation accuracy drops to 92%
+  Threshold: 95%
+  Escalation: Data Science Lead
+  Response Time: 1 hour
+  Action: Review recent model changes, increase sampling rate
+
+Scenario 4: Critical compliance violation (privilege + MNPI)
+  Threshold: Zero tolerance
+  Escalation: CFO + CTO + Compliance Officer (all three)
+  Response Time: Immediate
+  Action: Shut down system, conduct full audit, notify legal
+
+p95 Latency Monitoring
+======================
+Target: <2 seconds for analyst workflow
+Bucket ranges: 0.1s, 0.25s, 0.5s, 1s, 2s, 5s, 10s
+
+Example latency distribution:
+  0-0.1s: 10% of queries
+  0.1-0.25s: 25% of queries
+  0.25-0.5s: 30% of queries
+  0.5-1s: 20% of queries
+  1-2s: 10% of queries (p95 = 1.8s → PASS)
+  2-5s: 4% of queries
+  5-10s: 1% of queries
+
+If p95 exceeds 2s → Alert SRE on-call

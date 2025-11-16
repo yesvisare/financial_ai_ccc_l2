@@ -1,0 +1,181 @@
+{
+  "sample_queries": [
+    {
+      "query": "What is Apple's latest earnings guidance?",
+      "response": "Apple's Q4 2024 guidance indicates revenue of $90-92B, representing 5-8% YoY growth. Management expects gross margin of 46-47%.",
+      "citations": [
+        {
+          "source": "SEC_EDGAR_AAPL_10Q_2024Q4",
+          "page": 12,
+          "quote": "Revenue guidance $90-92B for Q4 2024"
+        },
+        {
+          "source": "Bloomberg_AAPL_Terminal",
+          "page": 1,
+          "quote": "EPS estimate $1.35, consensus $1.32"
+        }
+      ],
+      "data_sources": ["SEC_EDGAR", "BLOOMBERG"],
+      "expected_compliance": true,
+      "expected_mnpi": false
+    },
+    {
+      "query": "Show me Tesla's cash flow statement",
+      "response": "Tesla's Q3 2024 operating cash flow was $3.2B, with free cash flow of $2.1B after $1.1B in capital expenditures.",
+      "citations": [
+        {
+          "source": "SEC_EDGAR_TSLA_10Q_2024Q3",
+          "page": 8,
+          "quote": "Operating cash flow $3.2B, FCF $2.1B"
+        }
+      ],
+      "data_sources": ["SEC_EDGAR"],
+      "expected_compliance": true,
+      "expected_mnpi": false
+    },
+    {
+      "query": "What are the risks mentioned in Microsoft's latest 10-K?",
+      "response": "Microsoft's FY2024 10-K identifies key risks including: (1) cybersecurity threats, (2) AI regulatory uncertainty, (3) cloud competition from AWS/Google, (4) foreign exchange headwinds.",
+      "citations": [
+        {
+          "source": "SEC_EDGAR_MSFT_10K_2024",
+          "page": 15,
+          "quote": "Principal risks to our business include cybersecurity, regulatory, and competitive factors"
+        }
+      ],
+      "data_sources": ["SEC_EDGAR"],
+      "expected_compliance": true,
+      "expected_mnpi": false
+    },
+    {
+      "query": "Compare Amazon and Walmart's operating margins",
+      "response": "Amazon's TTM operating margin is 5.8%, while Walmart's is 4.2%. Amazon benefits from higher-margin AWS (29% operating margin), offsetting lower retail margins.",
+      "citations": [
+        {
+          "source": "Bloomberg_AMZN_Financials",
+          "page": 1,
+          "quote": "Operating margin 5.8% TTM"
+        },
+        {
+          "source": "Bloomberg_WMT_Financials",
+          "page": 1,
+          "quote": "Operating margin 4.2% TTM"
+        }
+      ],
+      "data_sources": ["BLOOMBERG"],
+      "expected_compliance": true,
+      "expected_mnpi": false
+    },
+    {
+      "query": "What is the upcoming earnings announcement for NVIDIA?",
+      "response": "⚠️ BLOCKED - This query may involve Material Non-Public Information (MNPI). For earnings calendar information, please consult public investor relations sources.",
+      "citations": [],
+      "data_sources": [],
+      "expected_compliance": false,
+      "expected_mnpi": true,
+      "violation_reason": "MNPI keyword detection: 'upcoming earnings'"
+    },
+    {
+      "query": "Analyze JP Morgan's capital adequacy ratios",
+      "response": "JPMorgan Chase's Q3 2024 CET1 ratio is 15.3%, well above the regulatory minimum of 10.5%. Tier 1 capital ratio is 16.8%.",
+      "citations": [
+        {
+          "source": "SEC_EDGAR_JPM_10Q_2024Q3",
+          "page": 24,
+          "quote": "CET1 ratio 15.3%, Tier 1 ratio 16.8%"
+        }
+      ],
+      "data_sources": ["SEC_EDGAR"],
+      "expected_compliance": true,
+      "expected_mnpi": false
+    },
+    {
+      "query": "What is Google's R&D spending trend?",
+      "response": "Alphabet's R&D expenses have grown from $31.6B (2022) to $39.5B (2023) to $46.2B (TTM 2024), representing ~14-15% of revenue consistently.",
+      "citations": [
+        {
+          "source": "SEC_EDGAR_GOOGL_10K_2023",
+          "page": 45,
+          "quote": "Research and development expenses $39.5B in 2023"
+        },
+        {
+          "source": "Internal_Financial_Model_GOOGL",
+          "page": 1,
+          "quote": "TTM R&D $46.2B (14.8% of revenue)"
+        }
+      ],
+      "data_sources": ["SEC_EDGAR", "INTERNAL_MODELS"],
+      "expected_compliance": true,
+      "expected_mnpi": false
+    },
+    {
+      "query": "Show me Meta's user growth metrics",
+      "response": "Meta's Q3 2024 daily active users (DAUs) reached 2.11B (+5% YoY), while monthly active users (MAUs) hit 3.07B (+4% YoY). Average revenue per user (ARPU) is $11.23.",
+      "citations": [
+        {
+          "source": "SEC_EDGAR_META_10Q_2024Q3",
+          "page": 6,
+          "quote": "DAUs 2.11B, MAUs 3.07B as of Sept 30, 2024"
+        }
+      ],
+      "data_sources": ["SEC_EDGAR"],
+      "expected_compliance": true,
+      "expected_mnpi": false
+    }
+  ],
+  "data_source_slas": {
+    "BLOOMBERG": {
+      "name": "Bloomberg Terminal",
+      "sla_hours": 0.083,
+      "description": "Real-time market data, <5 minutes staleness"
+    },
+    "SEC_EDGAR": {
+      "name": "SEC EDGAR",
+      "sla_hours": 24,
+      "description": "SEC filings, <24 hours staleness"
+    },
+    "INTERNAL_MODELS": {
+      "name": "Internal Financial Models",
+      "sla_hours": 1,
+      "description": "Proprietary models, <1 hour staleness"
+    },
+    "MARKET_DATA": {
+      "name": "Real-time Market Data",
+      "sla_hours": 0.083,
+      "description": "Live market feeds, <5 minutes staleness"
+    },
+    "RESEARCH_REPORTS": {
+      "name": "Research Reports",
+      "sla_hours": 24,
+      "description": "Analyst reports, <24 hours staleness"
+    }
+  },
+  "mnpi_test_cases": [
+    {
+      "text": "The upcoming earnings announcement will exceed expectations",
+      "contains_mnpi": true,
+      "keywords": ["upcoming earnings"]
+    },
+    {
+      "text": "Based on historical 10-K filings, the company has grown revenue 15% annually",
+      "contains_mnpi": false,
+      "keywords": []
+    },
+    {
+      "text": "Confidential merger discussions with Acme Corp are ongoing",
+      "contains_mnpi": true,
+      "keywords": ["confidential merger"]
+    },
+    {
+      "text": "The company's publicly filed balance sheet shows $5B in cash",
+      "contains_mnpi": false,
+      "keywords": []
+    }
+  ],
+  "metadata": {
+    "created_by": "L3_M10.2_Monitoring_Financial_RAG_Performance",
+    "purpose": "Demonstration and testing of financial RAG monitoring",
+    "version": "1.0.0",
+    "last_updated": "2024-11-16"
+  }
+}

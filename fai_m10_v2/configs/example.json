@@ -1,0 +1,46 @@
+{
+  "monitoring": {
+    "citation_sample_rate": 0.01,
+    "alert_enabled": false,
+    "prometheus_enabled": false,
+    "pagerduty_enabled": false,
+    "s3_enabled": false
+  },
+  "sla_thresholds": {
+    "citation_accuracy_percent": 95.0,
+    "p95_latency_seconds": 2.0,
+    "data_staleness_hours": {
+      "BLOOMBERG": 0.083,
+      "SEC_EDGAR": 24,
+      "INTERNAL_MODELS": 1,
+      "MARKET_DATA": 0.083,
+      "RESEARCH_REPORTS": 24
+    }
+  },
+  "mnpi_keywords": [
+    "upcoming earnings",
+    "pre-announcement",
+    "insider trading",
+    "material non-public",
+    "confidential merger",
+    "acquisition target",
+    "unreleased guidance",
+    "private placement"
+  ],
+  "alert_routing": {
+    "data_staleness": "data-engineering-oncall@example.com",
+    "mnpi_detection": "compliance-officer@example.com",
+    "infrastructure": "sre-oncall@example.com",
+    "critical_violation": [
+      "cfo@example.com",
+      "cto@example.com",
+      "compliance-officer@example.com"
+    ]
+  },
+  "audit": {
+    "retention_years": 7,
+    "storage_backend": "s3",
+    "encryption_enabled": true,
+    "completeness_required": 100.0
+  }
+}
